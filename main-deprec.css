@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@1,700&family=Nova+Mono&display=swap');
+
+#textTitle {
+color: #CD750F;
+font-family: 'B612 Mono', monospace;
+font-size: 32px;
+}
+
+#textSubtitle:after {
+content: "A Pocket Guide for the Aspiring Cryptographer";
+animation-name: textSubtitle;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+color: #E0A17A;
+font-family: 'Nova Mono', monospace;
+}
+
+
+@keyframes textSubtitle {
+0% {content: "A Pocket Guide for the Aspiring Cryptographer"}
+100% {content: "A Pocket Guide for the Aspiring Cryptographer_"}
+}
+
+
+
+body {
+	/*background-image: linear-gradient(#DAE6FD, #5994A8);
+	
+	/*background-image: url("homepagebg.jpg");*/
+
+}
+
+
+
+nav {
+
+}
+
+ul {
+list-style-type: none;
+margin:  0;  
+padding:  0;
+}
+
+li {
+	float: left;
+}
+
+
+
+a:link, a:visited {
+	display: block;
+	width: 20%;;
+	background-image: linear-gradient(to bottom right, #A8E4D5, #40777E);
+	border: color;
+	font-family:  'Nova Mono', monospace;
+	color:  #24676E;
+	text-decoration:  none;
+	text-align:  center;
+	font-weight:  bold;
+	text-transform:  uppercase;
+	padding:  50px;
+}
+
+
+a:hover, a:active {
+	background-image:  linear-gradient(to bottom right, #FFFFFF, #54A0AA);
+}
+
+
+
+
+header {
+backdrop-filter: blur(30px);
+}
+
+/*#headerbg {
+	background-image: url("homepagebg.jpg");
+	
+}*/
+
+	
+
