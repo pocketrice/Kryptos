@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@1,700&family=Nova+Mono&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@1,700&family=Nova+Mono&display=swap');
 
 #textTitle {
   color: #4A3B2C;
@@ -136,7 +136,7 @@ nav a {
   clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
 }
 
-nav a:hover, a:active {
+nav a:hover, nav a:active {
   color: rgb(194, 190, 165);
   background-image: url(papyrus.png);
   background-color: #746f5a;
@@ -171,22 +171,70 @@ body {
   background-image: url("interlaced.png");
 }
 
-#mainImg {
-  width: 35%;
-  margin:  5% 0 0 32%;
+.slidesImg {
+  width: clamp(300px, 60%, 600px);
+  padding: 5% 25% 0 25%;
   filter:  drop-shadow(5px 5px 3px #707070);
 }
 
-.caption {
+.slidesCaption {
   text-align: center;
   font-family: 'Nova Mono', monospace;
   font-size: clamp(9px, 2vw, 13px);
   font-style: italic;
   padding-bottom: 5px;
+  color:  #C4C3C4;
+
+  position:  absolute;
+  left: 28%;
+  top: clamp(300px, 87%, 800px);
+  z-index: 3;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  font-size:  40px; /* CLAMP */
+  font-family: 'B612 Mono', monospace;
+  user-select:  none;
+  -webkit-user-select:  none; /* Safari + Chrome */
+  color:  #F2E7E0;
+  padding:  25px 8px 25px 8px; /* CLAMP */
+  background-color:  #0000009A;
+  transition:  background-color 0.7s;
+  position:  absolute;
+  z-index: 2;
+  top: 310px; /* CLAMP */
+}
+
+.prev {
+left: 25%;
+border-radius: 0 7px 7px 0;
+}
+
+.next { 
+right: 15%; /* TODO */
+border-radius:  7px 0 0 7px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color:  #000000DA;
+}
+
+
+#captionOverlay {
+  background-color: #000000AA;
+  padding: 5% 0 0 clamp(300px, 60%, 600px);
+  position:  absolute;
+  left: 25%;
+  top: clamp(100px, 87%, 800px);
+  z-index: 2;
 }
 
 
 
+/* ====================================================== */
 
 @media only screen and (orientation: portrait) { /* When browser height > width */
 	.portraitMode { /* Note:  may need to split this class for more complex changes (?)*/
@@ -199,3 +247,5 @@ body {
  }
 }
 
+
+@media only screen and (max-width: )
