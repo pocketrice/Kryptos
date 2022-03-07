@@ -4,4 +4,4 @@ For your consideration:
 - Recommended browser: Firefox
 - Github page: https://github.com/PocketRice/Kryptos
 
-- Visit github.dev/PocketRice/Kryptos for online VS code and instantaneous commits!
+- Visit https://github.dev/PocketRice/Kryptos for online VS code and instantaneous commits!
