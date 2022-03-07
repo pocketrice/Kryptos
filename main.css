@@ -28,6 +28,12 @@
 }
 
 
+#citations {
+  font-family: 'Nova Mono', monospace;
+  font-size: 13px;
+}
+
+
 
 @keyframes textSubtitle {
   0% {content: "A Pocket Guide for the Aspiring Cryptographer"}
@@ -75,6 +81,63 @@ header {
   font-family: 'Nugelo Serif';
   padding: 10px 0 17px 0; /* top right bottom left */
 
+}
+
+footer {
+  background-color: #302d28;
+  font-family: 'Nova Mono', monospace;
+  color: #eadcce;
+  padding: 10px 0 10px 30px;
+}
+
+footer a {
+  color: #c2ecdc;
+}
+
+#section1 {
+background-color: #cae6eb5A;
+}
+
+#section1 li {
+  list-style-type: none;
+}
+
+#section2 {
+  background-color: #baeebf5A;
+}
+
+#section3 {
+  background-color: #ebc39f5A;
+}
+
+
+
+#section1 hr {
+  color: #cae6eb;
+  border-width: 3px;
+}
+
+#section2 hr {
+  color: #baeebf;
+  border-width: 3px;
+}
+
+#section3 hr {
+  color: #ebc39f;
+  border-width: 3px;
+}
+
+
+#section1, #section2, #section3 {
+  font-family: 'Gill Sans', sans-serif;
+  margin: 0 10px 0 10px;
+  background-blend-mode: multiply;
+}
+
+.sectionTitle {
+  font-family: 'Nova Mono', serif;
+  font-weight: bolder;
+  font-size: 16px;
 }
 
 
@@ -163,7 +226,8 @@ nav a:hover, nav a:active {
 
 
 #homepage {
-  background-image: linear-gradient(to bottom, #BFA9926D, #AF9B859D), url("interlaced.png");
+  background-image: linear-gradient(to top, #BFA9925D, #BFA9925D), /*linear-gradient(to top, #BFA9926D, #AF9B859D),*/ url("interlaced.png");
+  background-size: stretch;
 
 }
 
@@ -173,7 +237,7 @@ body {
 
 .slidesImg {
   width: clamp(300px, 60%, 600px);
-  padding: 5% 25% 0 25%;
+  padding: 5% 15% 0 25%;
   filter:  drop-shadow(5px 5px 3px #707070);
 }
 
@@ -213,7 +277,7 @@ border-radius: 0 7px 7px 0;
 }
 
 .next { 
-right: 15%; /* TODO */
+right: clamp(50px, 15%, 100px);
 border-radius:  7px 0 0 7px;
 }
 
@@ -247,5 +311,3 @@ border-radius:  7px 0 0 7px;
  }
 }
 
-
-@media only screen and (max-width: )

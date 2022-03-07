@@ -1,2 +1,5 @@
 # Kryptos
-Repository for version control on my Web Programming class' third project.
+Things to note:
+- Slideshow does not function properly yet -- will be fixed later!
+- Recommended browser: Firefox
+- Github page: https://github.com/PocketRice/Kryptos
