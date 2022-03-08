@@ -1,5 +1,10 @@
 # Kryptos
-Things to note:
+A pocket guide for the avid or aspiring cryptographer to learn about the next steps to becoming a professional encrypter/decrypter in the fleeting workforce! Try your hand at some quick demo puzzles, learn the ins-and-outs of the job, or read up on the history of ciphertexts. _Good thing this description wasn't encrypted with a one-time pad!_
+
+This project also has a focus on responsiveness -- to make a website that is responsive and works on all platforms (...maybe) -- and to mess around with Javascript to add some neat interactive bits.
+
+
+For your consideration:
 - Slideshow does not function properly yet -- will be fixed later!
 - Recommended browser: Firefox
-- Github page: https://github.com/PocketRice/Kryptos
+- Online VS Editor: https://github.dev/PocketRice/Kryptos
