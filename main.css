@@ -82,7 +82,7 @@ footer a {
 }
 
 #section1 {
-background-color: #cae6eb5A;
+  background-color: #cae6eb5A;
 }
 
 #section1 li {
@@ -259,13 +259,13 @@ body {
 }
 
 .prev {
-left: 25%;
-border-radius: 0 7px 7px 0;
+  left: 25%;
+  border-radius: 0 7px 7px 0;
 }
 
 .next { 
-right: 25%;
-border-radius:  7px 0 0 7px;
+  right: 25%;
+  border-radius:  7px 0 0 7px;
 }
 
 
