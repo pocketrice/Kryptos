@@ -1,14 +1,16 @@
- @import url('https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@1,700&family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Inconsolata&family=Nova+Mono&display=swap');
 
 #textTitle {
   color: #4A3B2C;
-  font-family: 'B612 Mono', monospace;
+  font-family: 'B612 Mono';
   font-size: 32px;
   padding-left: 3%;
   animation-name:  textTitle;
   animation-iteration-count: infinite;
   animation-duration: 10s;
   animation-timing-function: linear;
+  font-weight: bolder;
+  font-style: italic;
 }
 
 #textSubtitle:after { /* All this to basically animate textSubtitle between two frames of text */
@@ -48,28 +50,13 @@
 
 
 
-/* OLD VERSION!! 
-a:link, a:visited {
-	display: block;
-	width: 240px;
-	height:  30px;
-	background-image: linear-gradient(to bottom right, #A8E4D5, #40777E);
-	border: color;
-	font-family:  'Nova Mono', monospace;
-	color:  #24676E;
-	text-decoration:  none;
-	text-align:  center;
-	font-weight:  bold;
-	text-transform:  uppercase;
-	padding: 10px 0 10px 0;
-	transition: background-image 1s;
+
+.slidesImg {
+  display: none;
 }
 
 
-a:hover, a:active {
-	background-image:  linear-gradient(to bottom right, #FFFFFF, #54A0AA);
-	box-shadow:  2px 0px 6px inset;
-}*/
+
 
 
 
@@ -258,7 +245,7 @@ body {
 
 .prev, .next {
   cursor: pointer;
-  font-size:  40px; /* CLAMP */
+  font-size:  clamp(20px, 5vw, 40px); /* CLAMP */
   font-family: 'B612 Mono', monospace;
   user-select:  none;
   -webkit-user-select:  none; /* Safari + Chrome */
@@ -277,7 +264,7 @@ border-radius: 0 7px 7px 0;
 }
 
 .next { 
-right: clamp(50px, 15%, 100px);
+right: 25%;
 border-radius:  7px 0 0 7px;
 }
 
@@ -294,6 +281,11 @@ border-radius:  7px 0 0 7px;
   left: 25%;
   top: clamp(100px, 87%, 800px);
   z-index: 2;
+  border: 30px 0 30px 0;
+}
+
+th, td {
+  border: solid 5px #FFDD30;
 }
 
 
