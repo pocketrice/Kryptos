@@ -10,4 +10,4 @@ This project also has a focus on responsiveness -- to make a website that is res
 > For your consideration:
 - Slideshow does not function properly yet -- will be fixed later!&nbsp;&nbsp;&nbsp;:minidisc:
 - Recommended browser: Firefox&nbsp;&nbsp;&nbsp;:bookmark_tabs:
-- Online VS Editor: https://github.dev/PocketRice/Kryptos &nbsp;&nbsp;&nbsp;:trackball:
+- Online VS Editor: https://github.dev/PocketRice/Kryptos &nbsp;&nbsp;:trackball:
