@@ -1,4 +1,6 @@
 # Kryptos
+![RSA Conference](https://github.com/PocketRice/Kryptos/blob/main/rsa-conf3.jpg?raw=true)
+
 A pocket guide for the avid or aspiring cryptographer to learn about the next steps to becoming a professional encrypter/decrypter in the fleeting workforce! Try your hand at some quick demo puzzles, learn the ins-and-outs of the job, or read up on the history of ciphertexts. _Good thing this description wasn't encrypted with a one-time pad!_
 
 This project also has a focus on responsiveness -- to make a website that is responsive and works on all platforms (...maybe) -- and to mess around with Javascript to add some neat interactive bits.
