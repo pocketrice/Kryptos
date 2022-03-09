@@ -1,0 +1,19 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+{
+	"variables":
+	{
+	"red": "#d64b80",
+    "red1": "#d64b80",
+    "orange": "#fea518",
+    "orange1": "#fea518",
+    "aqua": "#4bc0ab",
+    "aqua1": "#4bc0ab",
+	},
+	"globals":
+	{
+	},
+	"rules":
+	[
+		
+	]
+}
