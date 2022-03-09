@@ -1,4 +1,3 @@
-// Documentation at https://www.sublimetext.com/docs/color_schemes.html
 {
 	"variables":
 	{
@@ -6,8 +5,10 @@
     "red1": "#d64b80",
     "orange": "#fea518",
     "orange1": "#fea518",
-    "aqua": "#4bc0ab",
-    "aqua1": "#4bc0ab",
+    "aqua": "#2dbba3",
+    "aqua1": "#2dbba3",
+    "purple": "#99d7be",
+    "purple1": "#99d7be",
 	},
 	"globals":
 	{
