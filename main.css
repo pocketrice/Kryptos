@@ -2,14 +2,14 @@
 
 #textTitle {
   color: #4A3B2C;
-  font-family: 'B612 Mono';
+  font-family: 'Victor Mono';
   font-size: 32px;
   padding-left: 3%;
   animation-name:  textTitle;
   animation-iteration-count: infinite;
   animation-duration: 10s;
   animation-timing-function: linear;
-  font-weight: bolder;
+  font-weight: bold;
   font-style: italic;
 }
 
@@ -82,36 +82,28 @@ footer a {
 }
 
 #section1 {
-  background-color: #cae6eb5A;
+  width: 50%;
+    background-color: #EDD5AA;
+  background-image:  url("fabric.jpg");
+  background-blend-mode: multiply;
 }
 
-#section1 li {
-  list-style-type: none;
+#sec1BG {
+position:  absolute;
+filter: blur(6px) saturate(25%);
+z-index: -1;
+width: 100%;
 }
 
-#section2 {
-  background-color: #baeebf5A;
+div#section1 .button { /* TODO: make buttons remniscent to navbar buttons; link to somewhere??? */
+font-family: "Nugelo Serif";
+clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+height: 50px;
+width: 120px;
 }
 
-#section3 {
-  background-color: #ebc39f5A;
-}
-
-
-
-#section1 hr {
-  color: #cae6eb;
-  border-width: 3px;
-}
-
-#section2 hr {
-  color: #baeebf;
-  border-width: 3px;
-}
-
-#section3 hr {
-  color: #ebc39f;
-  border-width: 3px;
+div#section1 .buttonText {
+  position:  absolute;
 }
 
 
@@ -122,9 +114,9 @@ footer a {
 }
 
 .sectionTitle {
-  font-family: 'Nova Mono', serif;
+  font-family: 'B612 Mono', serif;
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 25px;
 }
 
 
@@ -144,6 +136,16 @@ html {
 @font-face { /* OK for website? listed as personal use */
   font-family: 'Nugelo Serif';
   src: url(nugeloserif.otf);
+}
+
+@font-face {
+  font-family: 'Monaco';
+  src:  url(Monaco.woff);
+}
+
+@font-face { /* Is reg just needed, or do you need to import all font variants?? */
+  font-family: 'Victor Mono';
+  src:  url(VictorMono.woff);
 }
 
 
@@ -284,9 +286,27 @@ body {
   border: 30px 0 30px 0;
 }
 
-th, td {
-  border: solid 5px #FFDD30;
+
+table {
+  font-family: Victor Mono;
+
 }
+
+td.trTitle {
+  /*border: solid 5px #FFDD30;*/
+  font-weight: bold;
+  font-size: 23px;
+}
+
+td:not(.trTitle) {
+  padding-left: 60px;
+}
+
+.summaryText {
+  font-family: Victor Mono;
+  font-size: 18px;
+}
+
 
 
 

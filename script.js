@@ -1,4 +1,9 @@
 var slideIndex = 1;
+var pageIndex = 1; // TODO: try to get citation page to know what page the user was previously on and then send them there??
+
+
+
+
 
 function plusSlides(n) {
 	showSlides(slideIndex += n)
@@ -36,7 +41,7 @@ function slidesKeyPress(e) {
 		showSlides(slideIndex -= 1);
 	}
 
-	if (e.keyCode != '39')
+	if (e.keyCode == '39')
 	{
 		showSlides(slideIndex += 1);
 	}
