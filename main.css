@@ -1,3 +1,5 @@
+/* Description:  the integral CSS for the entire website -- note that ALL pages use this single file so it may be a bit unorganized. */
+
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Inconsolata&family=Nova+Mono&display=swap');
 
 #textTitle {
@@ -90,7 +92,8 @@ footer a {
 
 #sec1BG {
 position:  absolute;
-filter: blur(6px) saturate(25%);
+/*filter: blur(6px) saturate(25%);*/
+filter: drop-shadow();
 z-index: -1;
 width: 100%;
 }
