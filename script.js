@@ -1,6 +1,7 @@
 var slideIndex = 1;
 var pageIndex = 1; // TODO: try to get citation page to know what page the user was previously on and then send them there??
-
+var tableCert = null;
+var tablePathway = null; // TODO: set each table to the table FOUND ON PAGE XX.html.
 
 
 
@@ -46,5 +47,9 @@ function slidesKeyPress(e) {
 		showSlides(slideIndex += 1);
 	}
 }
+
+
+
+function tableReplace
 
 

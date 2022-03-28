@@ -86,9 +86,32 @@ footer a {
 #section1 {
   width: 50%;
     background-color: #EDD5AA;
-  background-image:  url("fabric.jpg");
-  background-blend-mode: multiply;
+  background-image:  url("newspaper-nobg.png");
+  background-blend-mode: add;
 }
+
+.darkBG {
+  background-image:  url("walnut-wood.webp");
+  height: 100%;
+  filter: blur(0.3px);
+  box-shadow: 10px 10px 10px #301D14 inset;
+}
+
+.darkBG + table {
+  position: absolute;
+  top: 40%;
+  margin: 10px;
+  color: #D2BEA6;
+}
+
+td.trTitle + td{
+visibility: hidden;
+}
+
+td.trTitle + td:after {
+  content: ;
+}
+
 
 #sec1BG {
 position:  absolute;
@@ -217,14 +240,9 @@ nav a:hover, nav a:active {
 }
 
 
-#homepage {
+body {
   background-image: linear-gradient(to top, #BFA9925D, #BFA9925D), /*linear-gradient(to top, #BFA9926D, #AF9B859D),*/ url("interlaced.png");
   background-size: stretch;
-
-}
-
-body {
-  background-image: url("interlaced.png");
 }
 
 .slidesImg {
@@ -233,7 +251,7 @@ body {
   filter:  drop-shadow(5px 5px 3px #707070);
 }
 
-.slidesCaption {
+.slidesCaption { /* TODO:  FIX! Looks like it might be bugged somehow? CSS or html? CHECK AFTERSCHOOL. */
   text-align: center;
   font-family: 'Nova Mono', monospace;
   font-size: clamp(9px, 2vw, 13px);
@@ -308,6 +326,23 @@ td:not(.trTitle) {
 .summaryText {
   font-family: Victor Mono;
   font-size: 18px;
+}
+
+
+
+sup a {
+  color: #42AE9F;
+  font-size: clamp(10px, 3vw, 13px);
+}
+
+
+.todo { /* REMOVE ONCE DONE! */
+  color: #FC3321;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #FEB1AECF;
+  background-image: url(papyrus.png);
+  background-blend-mode: color-burn;
 }
 
 
