@@ -105,11 +105,11 @@ footer a {
 }
 
 td.trTitle + td{
-visibility: hidden;
+/*visibility: hidden;*/
 }
 
 td.trTitle + td:after {
-  content: ;
+/* WIP */
 }
 
 
@@ -241,7 +241,7 @@ nav a:hover, nav a:active {
 
 
 body {
-  background-image: linear-gradient(to top, #BFA9925D, #BFA9925D), /*linear-gradient(to top, #BFA9926D, #AF9B859D),*/ url("interlaced.png");
+  background-image: linear-gradient(to top, #BFA9926D, #BFA992AD), /*linear-gradient(to top, #BFA9926D, #AF9B859D),*/ url("interlaced.png");
   background-size: stretch;
 }
 
@@ -251,7 +251,7 @@ body {
   filter:  drop-shadow(5px 5px 3px #707070);
 }
 
-.slidesCaption { /* TODO:  FIX! Looks like it might be bugged somehow? CSS or html? CHECK AFTERSCHOOL. */
+.slidesCaption {
   text-align: center;
   font-family: 'Nova Mono', monospace;
   font-size: clamp(9px, 2vw, 13px);
@@ -326,6 +326,7 @@ td:not(.trTitle) {
 .summaryText {
   font-family: Victor Mono;
   font-size: 18px;
+  margin: 10px;
 }
 
 
@@ -345,9 +346,52 @@ sup a {
   background-blend-mode: color-burn;
 }
 
+p, h2 {
+  font-family: 'Gill Sans', sans-serif;
+}
+
+#clsubstitution {
+
+}
+
+div.warning {
+background-image: linear-gradient(to top left,#FFD04EB3, #FFF3787B), url(papyrus.png);/* WIP: FIND A DIAGONAL STRIPED BG */;
+border: 5px;
+padding: 10px;
+border-radius: 20px;
+border-style: solid;
+border-color: #534F29;
+margin: 0 80px 0 15px;
+}
+
+p.warning {
+font-weight: bold;
+font-style: italic;
+font-size: 20px;
+color:  #84771E;
+}
+
+div.info {
+background-image: linear-gradient(to top left,#298678B3, #2681737B), url(papyrus.png);/* WIP: FIND A DIAGONAL STRIPED BG */;
+border: 5px;
+padding: 10px;
+border-radius: 20px;
+border-style: solid;
+border-color: #31544C;
+margin: 0 80px 0 15px;
+}
+
+p.info {
+font-weight: bold;
+font-style: italic;
+font-size: 20px;
+color:  #1F6254;
+}
 
 
-
+div.content {
+  margin: 0 15px 0 15px;
+}
 /* ====================================================== */
 
 @media only screen and (orientation: portrait) { /* When browser height > width */

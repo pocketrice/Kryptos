@@ -50,6 +50,9 @@ function slidesKeyPress(e) {
 
 
 
-function tableReplace
+function tableReplace()
+{
+	throw new Error('Not finished!!') ;
+}
 
 

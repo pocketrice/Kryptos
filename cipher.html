@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 
 	<meta charset="utf-8"> <!-- Recommended meta -->
+	<meta name="title" content="Kryptos">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Recommended meta -->
 	<meta name="description" content="An in-depth introduction to the growing cryptographer job">
 	<meta name="keywords" content="cryptography, computer science, job">
@@ -28,11 +29,123 @@
 
 		</ul>
 	</nav>
+<div class="content">
+<div class="summaryText">
+<p>A key part of understanding cryptography is to delve a little deeper into the mathematical side of things -- this includes a vital tool, ciphers!
+<br><br><hr>
+</div>
+<p>There are two forms of ciphers: classical and modern. Most classical ciphers are simple and easy to decode, while modern techniques are more advanced and often brute forcing is infeasible (but possible).</p>
+<br><br>
+<h2>Classical Ciphers</h2>
+<p>These ciphers are relatively simple, and they are divided into two categories: <strong>substitution and transposition</strong> ciphers.
+<img src="classical-substitution-graphic.svg" id="clsubstitution">
+<hr>
+<h2>--> Atbash</h2>
+<p>This simple cipher simply replaces the first letter of the alphabet with the last, the second with the second-to-last, and so on. (A becomes Z, B becomes Y, etc.) <em>For all of these ciphers, you can use the Cipher Machine to experiment with them!</em>
+<br>
+<div class="warning">
+<p class="warning">CAREFUL!</p>
+<p>Classical ciphers are not very secure and are easy to crack with today's technology. They are rather simple and were made considering that human brute forcing would be unreasonable... but of course, computers exist today. <br><br>If you're looking for a practical, secure encryption method, take a look at the <strong>modern ciphers</strong> section of this page!</p>
+</div>
+<br>
+<h2>--> ROT13</h2>
+<p>This cipher is rather simple and easy. <dfn>It simply replaces a letter with the letter 13 places after it in the standard alphabet, which can still make a message obscured but easy to decipher.</dfn></p><br>
+<p>Why specifically 13 spaces? This is because the basic Latin alphabet has 26 letters (2 x 13).
+<br>
+<h2>--> Caesar</h2>
+<p>This cipher is famous and well-known, for one reason: it is simple and easy to understand. Of course, it provides no practical security nowadays whatsoever, but is an interesting novelty / introduction to ciphers. <dfn>This develops further on ROT13, instead allowing for shifting by any number of spaces.</dfn></p>
+<br>
+<h2>--> Baconian</h2>
+<br><p>The Baconian cipher is fittingly named after its inventor, Sir Francis Bacon. <dfn>Every letter is replaced by a sequence of 5 characters algorithmically, which you can see below:</dfn></p>
+<br>
+<table>
+	<tr class="labelColumn">
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+	<tr>
+	</tr>
+	<tr class="labelColumn">
 
-	<img id="placeholder-img" src="rain-park.jpg">
-	<p id="placeholder-txt">Under construction!</p>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td>P</td>
+	<td>Q</td>
+	<td>R</td>
+	</tr>
+	<tr>
+	</tr>
+	<tr class="labelColumn">
 
 
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+	</tr>
+</table>
+<p>How does this work? Well, we use these character sequences to strategically capitalize and uncapitalize letters (a = lowercase, b = uppercase), encoding the message into filler text:
+<p>hello -> AABBB AABAA ABABB ABABB ABBBA -> in A HOle In thE gROuNd THeRE Lived a hobbit
+
+<h2>--> Simple Substitution</h2>
+<p>This cipher substitutes every plaintext letter with a different ciphertext letter, based on a "cipher alphabet":</p>
+<p>Plain alphabet: abcdefghijklmnopqrstuvwxyz<br>Cipher alphabet: phqgiumeaylnofdxjkrcvstzwb</p>
+<br><br>
+<p>Rather simple, no? The following section will brief you on polyalphabetic ciphers, a slightly more complex variation on the previously mentioned ciphers.
+
+<br><br><hr><br>
+<h2>--> Running Key </h2>
+<p>The running key cipher, much like other polyalphabetic ciphers, relies on a key and a tableau to encrypt and decrypt messages.
+
+<br><br>
+<div class="info">
+<p class="info">Did you know?</p>
+<p>The tableau, or tabula recta, <dfn>is a square chart of alphabets with each row being the previous row shifted one to the left. This creates a chart where any combination of two letters produces a specific letter.</dfn> <br>This is used alongside a key for most polyalphabetic ciphers. Really interesting stuff!</p>
+<br><br>
+<p>For this cipher, the key is a long piece of text -- often an excerpt from a book. By formatting the key text in camel case (remove all whitespaces), we can match each letter of our message to a letter from the key and use the tableau to generate an encrypted message.</p>
+</div>
+<h2>--> Vigen&egrave;re</h2>
+<p>This cipher is famous for being considered "le chiffre ind hiffrable" (French for "unbreakable cipher") for nearly 300 years, and is commonly used today (not in practical settings of course).</p>
+<br>
+<p>The Vigen&egrave;re uses a key and tableau just like with the running key cipher, except the key is a key word rather than a full excerpt (this makes running key more 'secure' than Vigen&egrave;re usually).</p>
+<br>
+<p>Repeat the same process as with running key, where the key word is repeated over and over and matched to the message's letters to generate the encrypted message.</p>
+<br>
+<h2>--> Enigma</h2>
+<div class="info">
+<p class="info">Did you know?</p>
+<p>The Enigma cipher machine is famous for its use in Germany during WWII, but was conceived prior to the war. It was considered so secure that it was used for some of the most confidential messages from the highest ranks, and its extensive features proved to be a real cryptographic challenge for avid decryptors.</p>
+<p>This cipher was very much an enigma, being far more flexible (and thus harder to decrypt) than all the previous examples.</p></div>
+<br>
+<p>The Enigma uses a rotor mechanism that generated a cipher alphabet and was capable of both encryption and decryption -- the flexibility of it all stems from its adjustable machine settings, commonly based on a predetermined key lists that both the transmitter and receiver would use to properly encode/decode the message.</p>
+<br>
+<p>First, there are some important considerations to note about the Enigma:<p>
+	<ul>
+		<li><p>Every time a key is pressed, the entire cipher alphabet changes <em>(so pressing the same key repeatedly won't produce the same outputs)</em></p></li>
+		<li><p>The three changeable components of the Enigma are the rotors, the ringstellung <em>(ring settings)</em>, and steckerverbindungen <em>(plug board settings)</em>.</p></li>
+		<li><p>This particular explanation focuses on the Enigma I (Wehrmacht Enigma) -- yes, there are other variants too! <strong>(check the resources page to learn more)</strong></p></li>
+	</ul>
+<br>
+<p>The Enigma, at its simplest, essentially takes an input and passes through three rotors (which contain different substitution cipher alphabets), then runs through a reflector which passes the input back through the rotors backwards. To add to its complexity, the input passes through an interchangeable plugboard (which functions as a )
+<p>How does the Enigma encrypt the same input differently every time a key is pressed? The answer is the three rotors -- every time a key is pressed, rotor I moves forward one position; when it has turned through all 26 letters encryption is based on rotor II, which repeats the process. <strong>This alone allows for 17,000 different combinations before the encryption process repeats!</strong></p>
+<br>
+<br>
+
+</div>
 	<footer>
 <small>Copyright &copy; 2022 Lucas <strong>&nbsp;&boxV;&nbsp;</strong>   
 <a href="mailto:xie.3@uaschools.org">Questions? Concerns? Email the author</a> <strong>&nbsp;&boxV;&nbsp;</strong>  <a href="citations.html">Citations</a></small>
