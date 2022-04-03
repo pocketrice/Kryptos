@@ -6,6 +6,7 @@
 <head>
 	<title>Kryptos | Ciphertexts</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="icon" type="image/x-icon" href="kryptos-favicon.png">
 
 	<meta charset="utf-8"> <!-- Recommended meta -->
 	<meta name="title" content="Kryptos">
@@ -36,8 +37,7 @@
 </div>
 <p>There are two forms of ciphers: classical and modern. Most classical ciphers are simple and easy to decode, while modern techniques are more advanced and often brute forcing is infeasible (but possible).</p>
 <br><br>
-<h2>Classical Ciphers</h2>
-<p>These ciphers are relatively simple, and they are divided into two categories: <strong>substitution and transposition</strong> ciphers.
+<h2>Substitution Ciphers</h2>
 <img src="classical-substitution-graphic.svg" id="clsubstitution">
 <hr>
 <h2>--> Atbash</h2>
@@ -140,10 +140,69 @@
 		<li><p>This particular explanation focuses on the Enigma I (Wehrmacht Enigma) -- yes, there are other variants too! <strong>(check the resources page to learn more)</strong></p></li>
 	</ul>
 <br>
-<p>The Enigma, at its simplest, essentially takes an input and passes through three rotors (which contain different substitution cipher alphabets), then runs through a reflector which passes the input back through the rotors backwards. To add to its complexity, the input passes through an interchangeable plugboard (which functions as a )
+<p>The Enigma, at its simplest, essentially takes an input and passes through three rotors (which contain different substitution cipher alphabets), then runs through a reflector which passes the input back through the rotors backwards. To add to its complexity, the input passes through an interchangeable plugboard (which can be set to replace all instances of one letter with another) twice throughout the entire process.</p>
 <p>How does the Enigma encrypt the same input differently every time a key is pressed? The answer is the three rotors -- every time a key is pressed, rotor I moves forward one position; when it has turned through all 26 letters encryption is based on rotor II, which repeats the process. <strong>This alone allows for 17,000 different combinations before the encryption process repeats!</strong></p>
 <br>
 <br>
+<h2>Transposition Ciphers</h2>
+<img src="classical-transposition-graphic.svg">
+<div class="warning">
+<p class="warning">CAREFUL!</p>
+<p>It is important to note that transposition ciphers differ from substitution ciphers in that they do not preserve the order of the message! Its security comes mainly from permutations instead -- this makes them more primitive and easier to decode than substitution ciphers, but they can be the basis for stronger encryption methods.</p>
+</div>
+<h2>--> Rail Fence</h2>
+<p>The name of this cipher comes from the method of encryption visually looking like diagonal "rails on a fence".The plaintext is written diagonally downwards and upwards in a wave pattern, and the final encryption is made by writing down each row.</p>
+<br>
+<p>So, using this method, "hello world" would be encrypted as HOLELWRDLO.</p>
+<br><br>
+<h2>--> Scytale</h2>
+<p>The scytale is remarkably similar to the rail fence cipher, except instead of a "diagonally downward, diagonally upward", it is a pattern of only going diagonally downward. The encrypted message is still made based on each row.</p>
+<br><br>
+<h2>--> Route</h2>
+<p>The route cipher is considered surprisingly a practical and secure encryption method if messages are of a significant length (even too great for feasible brute-forcing by computers)!</p>
+<p>The plaintext is first written out in a grid of specified width and height, and encryption/decryption depends on the key -- which specifies a "path" that determines the encrypted message.</p></p>
+<div class="info">
+<p class="info">Did you know?</p>
+<p>
+The route cipher variation known as the Union Route Cipher was used by Union forces during the Civil War, where entire words were transposed instead of individual letters. Since this was less secure, these words were then further encrypted using substitution.</p>
+<p>Sometimes null words were added not just to strengthen the message's encryption, as they were often chose to make the ciphertext much more humorous!</p></div>
+<br><br>
+<h2>--> Columnar Transposition</h2>
+<p>Columnar transposition involves writing out the message in specified dimensions (much like the initial steps of route encryption) based on a keyword (whose length determines the number of columns).</p>
+<br>
+<p>Then, encryption is based on the alphabetical order of the letters in the keyword, matching each column to a set order.</p>
+<div class="warning">
+<p class="warning">CAREFUL!</p>
+<p>Single columnar transpositions (detailed above) are notably insecure given that the encrypted message can be written in columns and easily brute-forced. However, one easy and simple way most utilizing the columnar method used to strengthen the encryption was...</p></div>
+<br><br>
+<h2>--> Double Transposition</h2>
+<p>...simply applying columnar transposition yet again!</p>
+<p>Double transposition simply involves writing out the pre-transposed message with number of columns dependent on the keyword (which can be the same or different) and so forth.</p>
+<br><br>
+<h2>--> Myszkowski Transposition</h2>
+<p>Myszkowski encryption is based on columnar transposition and expands on the concept itself.</p>
+<p>While utilizing the same process, the keyword does not have unique characters but instead purposely uses a word that has reoccurring letters (such as "tomato").</p>
+<p>Columns with unique numbers are read downwards, while those with reoccurring letters are read from left to right.</p>
+<h2>The One-Time Pad</h2>
+<p>Another <em>very</em> interesting cipher is the one-time pad, which is a form of encryption that is impossible to crack.</p>
+<p>A message is paired with a secret key (consisting of a randomized set of letters), where each character of the message is matched to a character from the key using modular addition (as in, y + c would produce b).</p>
+<br><br>
+<p>As Wikipedia notes, the resulting encryption will be absolutely impossible to decrypt without having the key itself if the following conditions are satisfied:</p>
+<ul>
+	<li>The key is the same length or longer than the message.</li>
+	<li>The key is completely random and kept completely secret.</li>
+	<li>The key must never be reused in any way.</li>
+</ul>
+<div class="info">
+<p class="info">Did you know?</p>
+<p>
+The one-time pad was used extensively by the NSA throughout the 1970s and onwards. Over 86,000 one-time pads were produced and used by the agency in 1972 alone!</p></div>
+<br><br>
+<h2>Modern Ciphers</h2>
+<p>In a world where tools such as computers can quickly and easily break through most classical ciphers, it quickly became necessary to find new methods of encryption that could be brute-forced with computers, but would be unfeasible (e.g. theoretically requiring thousands of years to correctly decrypt).</p>
+<p>This is where modern ciphers come in -- with some of the most famous examples being encryption algorithms/hashes such as SHA, RSA, and AES.</p>
+<br><br>
+
 
 </div>
 	<footer>

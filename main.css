@@ -355,7 +355,7 @@ p, h2 {
 }
 
 div.warning {
-background-image: linear-gradient(to top left,#FFD04EB3, #FFF3787B), url(papyrus.png);/* WIP: FIND A DIAGONAL STRIPED BG */;
+background-image: linear-gradient(to top left, #FFD04EB3, #FFF3787B), url(papyrus.png);/* WIP: FIND A DIAGONAL STRIPED BG */;
 border: 5px;
 padding: 10px;
 border-radius: 20px;
@@ -389,7 +389,7 @@ color:  #1F6254;
 }
 
 
-div.content {
+.content {
   margin: 0 15px 0 15px;
 }
 /* ====================================================== */
