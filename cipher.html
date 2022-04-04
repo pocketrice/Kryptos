@@ -41,8 +41,15 @@ A key part of understanding cryptography is to delve a little deeper into the ma
 <br><br>
 <div class="stripe-type-A"> <!-- SECTION 1 -->
 <h2>Substitution Ciphers<sup><a href="citations.html#13">13</a></sup></h2>
-<img src="classical-substitution-graphic.svg" id="clsubstitution">
-<h2>Atbash</h2>
+<img src="classical-substitution-graphic.svg" usemap="#image_map" id="cl-substitution" loading="lazy"><map name="image_map">
+  <area alt="atbash" title="atbash" href="cipher.html#atbash" coords="452,70,592,232" shape="rect">
+  <area alt="rot13" title="rot13" href="cipher.html#rot13" coords="603,72,728,238" shape="rect">
+  <area alt="caesar" title="caesar" href="cipher.html#caesar" coords="741,69,875,238" shape="rect">
+  <area alt="baconian" title="baconian" href="cipher.html#baconian" coords="900,63,1056,225" shape="rect">
+  <area alt="simplesubst" title="simplesubst" href="cipher.html#simplesubst" coords="1063,64,1232,225" shape="rect">
+</map>
+
+<h2 id="atbash">Atbash</h2>
 <p>This simple cipher simply replaces the first letter of the alphabet with the last, the second with the second-to-last, and so on. (A becomes Z, B becomes Y, etc.) <!--<em>For all of these ciphers, you can use the Cipher Machine to experiment with them!</em>-->
 <br>
 <div class="warning">
@@ -50,14 +57,14 @@ A key part of understanding cryptography is to delve a little deeper into the ma
 <p>Classical ciphers are not very secure and are easy to crack with today's technology. They are rather simple and were made considering that human brute forcing would be unreasonable... but of course, computers exist today. <br><br>If you're looking for a practical, secure encryption method, take a look at the <strong>modern ciphers</strong> section of this page!</p>
 </div>
 <br><br><br><br><br>
-<h2>ROT13</h2>
+<h2 id="rot13">ROT13</h2>
 <p>This cipher is rather simple and easy. <dfn>It simply replaces a letter with the letter 13 places after it in the standard alphabet, which can still make a message obscured but easy to decipher.</dfn></p><br>
 <p>Why specifically 13 spaces? This is because the basic Latin alphabet has 26 letters (2 x 13).
 <br><br><br><br><br>
-<h2>Caesar</h2>
+<h2 id="caesar">Caesar</h2>
 <p>This cipher is famous and well-known, for one reason: it is simple and easy to understand. Of course, it provides no practical security nowadays whatsoever, but is an interesting novelty / introduction to ciphers. <dfn>This develops further on ROT13, instead allowing for shifting by any number of spaces.</dfn></p>
 <br><br><br><br><br>
-<h2>Baconian</h2><p>The Baconian cipher is fittingly named after its inventor, Sir Francis Bacon. <dfn>Every letter is replaced by a sequence of 5 characters algorithmically, which you can see below:</dfn></p>
+<h2 id="baconian">Baconian</h2><p>The Baconian cipher is fittingly named after its inventor, Sir Francis Bacon. <dfn>Every letter is replaced by a sequence of 5 characters algorithmically, which you can see below:</dfn></p>
 <br>
 <table>
 	<tr class="labelColumn">
@@ -102,7 +109,7 @@ A key part of understanding cryptography is to delve a little deeper into the ma
 <p>How does this work? Well, we use these character sequences to strategically capitalize and uncapitalize letters (a = lowercase, b = uppercase), encoding the message into filler text:
 <p>hello -> AABBB AABAA ABABB ABABB ABBBA -> in A HOle In thE gROuNd THeRE Lived a hobbit
 <br><br><br><br><br>
-<h2>Simple Substitution</h2>
+<h2 id="simplesubst">Simple Substitution</h2>
 <p>This cipher substitutes every plaintext letter with a different ciphertext letter, based on a "cipher alphabet":</p>
 <p>Plain alphabet: abcdefghijklmnopqrstuvwxyz<br>Cipher alphabet: phqgiumeaylnofdxjkrcvstzwb</p>
 <br><br>
@@ -146,7 +153,7 @@ A key part of understanding cryptography is to delve a little deeper into the ma
 <p>How does the Enigma encrypt the same input differently every time a key is pressed? The answer is the three rotors -- every time a key is pressed, rotor I moves forward one position; when it has turned through all 26 letters encryption is based on rotor II, which repeats the process. <strong>This alone allows for 17,000 different combinations before the encryption process repeats!</strong></p>
 <br><br><br><br><br></div><hr><br><br><div class="stripe-type-A"> <!-- SECTION 3 -->
 <h2>Transposition Ciphers<sup><a href="citations.html#15">15</a></sup></h2>
-<img src="classical-transposition-graphic.svg">
+<img src="classical-transposition-graphic.svg" id="cl-transposition" loading="lazy">
 <div class="warning">
 <p class="warning">CAREFUL!</p>
 <p>It is important to note that transposition ciphers differ from substitution ciphers in that they do not preserve the order of the message! Its security comes mainly from permutations instead -- this makes them more primitive and easier to decode than substitution ciphers, but they can be the basis for stronger encryption methods.</p>
@@ -204,7 +211,7 @@ The one-time pad was used extensively by the NSA throughout the 1970s and onward
 <p>In a world where tools such as computers can quickly and easily break through most classical ciphers, it quickly became necessary to find new methods of encryption that could be brute-forced with computers, but would be unfeasible (e.g. theoretically requiring thousands of years to correctly decrypt).</p>
 <p>This is where modern ciphers come in -- with some of the most famous examples being encryption algorithms/hashes such as AES, RSA, and SHA.</p>
 <br><br>
-<img src="modern-ciphers-graphic.svg">
+<img src="modern-ciphers-graphic.svg" id="modern-ciphers" loading="lazy">
 <br>
 <h2>Advanced Encryption Standard (AES)<sup><a href="citations.html#18">18</a></sup></h2>
 <p><dfn>AES is a form of encryption that relies on symmetric-key cryptography, as in one key that is kept private between both the sending and receiving parties is used for both encryption and decryption of the message.</dfn></p>
