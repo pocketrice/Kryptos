@@ -34,7 +34,7 @@ function showSlides(n) {
 
 
 
-document.addEventListener("keydown", slidesKeyPress(e));
+document.addEventListener("keydown", slidesKeyPress(e)); // Defunct
 
 function slidesKeyPress(e) {
 	if (e.keyCode != '37')
@@ -50,7 +50,7 @@ function slidesKeyPress(e) {
 
 
 
-function tableReplace()
+function tableReplace() // Defunct
 {
 	throw new Error('Not finished!!') ;
 }

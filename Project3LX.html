@@ -1,0 +1,119 @@
+<!-- PROJECT 3: CAREER PAGE | Lucas Xie | P4A Web Programming -->
+<!-- Description: the home page for this website. It details basic information, and is a more traditional webpage (simple photo gallery, basic outline).-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Kryptos</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="icon" type="image/x-icon" href="kryptos-favicon.png">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jQuery -->
+	<script src="script.js"></script>
+
+	<meta charset="utf-8"> <!-- Recommended meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Recommended meta -->
+	<meta name="description" content="An in-depth introduction to the growing cryptographer job">
+	<meta name="keywords" content="cryptography, computer science, job">
+</head>
+
+
+<body id="homepage" onload="showSlides(slideIndex)">
+	<header> 
+		<span id="textTitle">Kryptos&nbsp;&nbsp;&nbsp;</span><br class="portraitMode"><span id="textSubtitle"></span>
+	</header>
+
+	<nav> <!-- NAVBAR -->
+		<ul>
+			<li> <a href="homepage.html" class="active">Home</a></li>
+			<li> <a href="pathway.html">Pathway</a></li>
+			<li> <a href="cert.html">Certifications</a></li>
+			<li> <a href="cipher.html">Ciphers</a></li>
+			<li> <a href="resources.html">Resources</a></li>
+			<li> <a href="demo.html">Demo</a></li>
+
+		</ul>
+	</nav>
+
+
+	<div id="slideshowMain"> <!-- SLIDESHOW -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- Note: all slideshow-related things based on W3Schools tutorial -->
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		<span id="captionOverlay"></span>
+
+		<div id="slideshow1">
+			<img src="RS-kryptos.jpg" class="slidesImg">
+			<p class="slidesCaption">Kryptos, a famous unsolved ciphertext outside of the CIA building<sup><a href="citations.html#1">1</a></sup></p>
+		</div>
+
+
+		<div id="slideshow2">
+			<img src="rsa-conf4.jpg" class="slidesImg">
+			<p class="slidesCaption">Large crowd at the 2013 RSA Conference, an annual expo centered around cryptography and security<sup><a href="citations.html#2">2</a></sup></p>
+		</div>
+
+		<div id="slideshow3">
+			<img src="RS-blackboard.jpg" class="slidesImg">
+			<p class="slidesCaption">Blackboard with calculations about Diffie-Hellman key exchanges, a technique of cryptography<sup><a href="citations.html#3">3</a></sup></p>
+		</div>
+
+		<div id="slideshow4">
+			<img src="RS-enigma.jpg" class="slidesImg">
+			<p class="slidesCaption">Enigma cipher machine at Bletchley Park, the famous HQ of Allied codebreaking during WWII<sup><a href="citations.html#4">4</a></sup></p>
+		</div>
+	</div>
+
+	<br><br><br>
+	<!--<img src="torn-edge-nobg.png" id="homepageTransition">-->
+<img src="kryptos-seam1.png" id="seam1">
+	<div id="homepageBG"> <!-- PROMO SECTION -->
+		<br><br><br><br><br><br><br><br><br>
+		<!--<hr>
+		<span class="sectionTitle">What is a cryptographer?</span><br><br>
+		<ul>
+			<li>Cryptographers are professionals adept at writing encryption code, which keeps data that should be kept private safe and are tasked with adapting to an ever-changing cybersecurity scene to ensure secure encryption can be achieved. Additionally, they must know the art of decryption as well, and be able to approach any tough problem with a creative problem-solving mindset. But, knowing how to program is only half of the job: cryptographers need to understand the mathematical roots of their encryption programs too!</li></ul>
+			<br><br>
+			<img src="papyrus.png" class="button"><p class="buttonText">Learn more</p><br><br><br><br>-->
+			<img src="kryptos-newspaper.svg" id="graphic1"> <!-- PROMO PART 1 -->
+			<a href="cipher.html"><img src="kryptos-note-1.svg" id="redirect1"></a>
+
+		<img src="kryptos-terminal.svg" id="graphic2"> <!-- PROMO PART 2 -->
+		<span id="kryptos-text-1">enigma-cipher-pro:~ % cd Desktop/"Fast Facts"<br>enigma-cipher-pro:Fast Facts % start fast-facts.jar<br><br><br>======================================================================<br><br><strong>// Some fast facts about cryptography!</strong><br><br>Salary (entry, average): <em>$109,500/yr, $149,040/yr</em><br><br>Outlook: <em>expected growth by 30% before 2028</em><br><br>Training: <em>bachelor's degree in math/computer science, mastery of <br>C++ and Java, algorithms, and symmetric/asymmetric cryptography</em><br><br>======================================================================</span>
+		<a href="pathway.html"><img src="kryptos-note-2.svg" id="redirect2"></a>
+
+<!--
+		<div id="section2">
+
+			<hr>
+			<span class="sectionTitle">Fast Facts</span><br>
+			<ul>
+				<li><strong>Salary (entry, average):</strong> $109,500/yr, $149,040/yr</li><br>
+				<li><strong>Outlook:</strong> expected growth by 30% before 2028</li><br>
+				<li><strong>Training:</strong> bachelor's degree in math or computer science, mastery of C/C++ and Java, algorithms, symmetric/asymmetric cryptography</li></ul>
+				<br><br><br><br>
+			</div>-->
+
+<img src="kryptos-paper-1.svg" id="paper1"> <!-- PROMO PART 3 -->
+<img src="kryptos-paper-2.svg" id="paper2">
+<img src="kryptos-paper-3.svg" id="paper3">
+<a href="cert.html"><img src="kryptos-note-3.svg" id="redirect3"></a>
+
+			<!--<div id="section3">
+				<hr>
+				<span class="sectionTitle">The Encrypter's Workday</span>
+				<ul>
+					<li>A cryptographer's day-to-day tasks will vary based on who they work for -- cryptography is a vital tool needed by many government agencies such as the NSA, and so a cryptographer may be tasked with a very difficult encrypted document that may provide valuable intelligence that can last many weeks. Meanwhile, a cryptographer working for a standard company may be instead tasked with smaller duties such as finding ways to protect the company's data from outside attacks with adaptive encryption methods.</li><br>
+					<li>Something that differs this job from many other computer science jobs is the fact that it is equally demanded by the government as it is by the private sector. However, usually only companies that hold very valuable or sensitive data hire cryptographers, as they need their data protected from any and all attacks/threats.</li><br>
+					<li>Cryptographers also must have a very solid foundation in mathematics -- ciphers and encryption themselves are based in fundamental math, and so cryptographers must be able to approach any potential problem with the right toolkit and the know-how to use these tools.</li><br>
+					<li>Working conditions can be very stressful at times. Sometimes encryption or decryption of certain data can be very urgent, and often cryptographers must work overtime spending the entirety of their time with lots of data and unintuitive equipment. Despite this, many enjoy the job for the unique puzzle-solving aspect of it all.</li><br><br>
+				</ul>
+
+			</div>-->
+</div>
+			<footer class="footerPositionOverride"> <!-- FOOTER -->
+				<small>Copyright &copy; 2022 Lucas <strong>&nbsp;&boxV;&nbsp;</strong>   
+					<a href="mailto:xie.3@uaschools.org">Questions? Concerns? Email the author</a> <strong>&nbsp;&boxV;&nbsp;</strong>  <a href="citations.html">Citations</a></small>
+				</footer>
+			</body>
+			</html>

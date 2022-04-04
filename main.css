@@ -1,6 +1,7 @@
 /* Description:  the integral CSS for the entire website -- note that ALL pages use this single file so it may be a bit unorganized. */
 
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Inconsolata&family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&display=swap');
 
 #textTitle {
   color: #4A3B2C;
@@ -79,65 +80,130 @@ footer {
   padding: 10px 0 10px 30px;
 }
 
+.footerPositionOverride {
+  position: relative;
+}
+
 footer a {
   color: #c2ecdc;
 }
 
-#section1 {
-  width: 50%;
-    background-color: #EDD5AA;
-  background-image:  url("newspaper-nobg.png");
-  background-blend-mode: add;
-}
 
 .darkBG {
   background-image:  url("walnut-wood.webp");
-  height: 100%;
-  filter: blur(0.3px);
+  height: 110%;
+  filter: blur(1px);
   box-shadow: 10px 10px 10px #301D14 inset;
 }
 
-.darkBG + table {
+#graphic1 {
+  width: 600px;
+  transform: rotateZ(10deg);
+  position: absolute;
+}
+
+#redirect1 {
+  transform: rotateZ(-20deg);
+  top: 500px;
+  left: 500px;
+  width: 300px;
+  position: absolute;
+}
+
+#graphic2 {
+  width: 800px;
+  position: absolute;
+  left: 400px;
+  top: 1000px;
+  transform: rotateZ(-10deg);
+
+}
+
+#redirect2 {
+  position: absolute;
+  transform: rotateZ(20deg);
+  top: 1400px;
+  left: 320px;
+  width: 300px;
+}
+
+#redirect3 {
+  position: absolute;
+  transform: rotateZ(10deg);
+  top: 2500px;
+  left: 600px;
+  width: 300px;
+}
+
+.stripe-type-A{
+  background-image: linear-gradient(to bottom, #a1c1ae6D, #c3ddd1AD,#a1c1ae6D), url("papyrus.png");
+}
+
+
+
+#kryptos-text-1 {
+  position: absolute;
+  font-family: Monaco;
+  color: #e2d6b0;
+  font-size: 11px;
+  top: 1080px;
+  left: 680px;
+  transform: rotateZ(-10deg);
+}
+
+#kryptos-text-1 em {
+  font-style: normal;
+  color: #8bcfb1;
+}
+
+#kryptos-text-1 strong {
+  font-weight: normal;
+  color: #70c755;
+}
+
+#paper1 {
+  position: absolute;
+  width: 600px;
+  top: 1900px;
+  transform: rotateZ(-10deg);
+}
+
+#paper2 {
+  position: absolute;
+  width: 600px;
+  left: 100px;
+    top: 2210px;
+    transform: rotateZ(5deg);
+}
+
+#paper3 {
+  position: absolute;
+  width: 600px;
+  left: 50px;
+    top: 2520px;
+    transform: rotateZ(-5deg);
+}
+
+
+
+table.infoTable {
   position: absolute;
   top: 40%;
   margin: 10px;
   color: #D2BEA6;
+  text-shadow:  5px 5px 5px #181614;
+
 }
 
-td.trTitle + td{
-/*visibility: hidden;*/
+table.infoTable td {
+  border: 20px solid;
+  border-color: #FFFFFF00;
 }
 
-td.trTitle + td:after {
-/* WIP */
+td.trTitle + td img {
+  width: 300px;
 }
 
-
-#sec1BG {
-position:  absolute;
-/*filter: blur(6px) saturate(25%);*/
-filter: drop-shadow();
-z-index: -1;
-width: 100%;
-}
-
-div#section1 .button { /* TODO: make buttons remniscent to navbar buttons; link to somewhere??? */
-font-family: "Nugelo Serif";
-clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
-height: 50px;
-width: 120px;
-}
-
-div#section1 .buttonText {
-  position:  absolute;
-}
-
-
-#section1, #section2, #section3 {
-  font-family: 'Gill Sans', sans-serif;
-  margin: 0 10px 0 10px;
-  background-blend-mode: multiply;
-}
 
 .sectionTitle {
   font-family: 'B612 Mono', serif;
@@ -151,6 +217,9 @@ body { /* Reset website defaults */
   padding: 0;
   width: 100%;
   height: 100%;
+    background-image: linear-gradient(to bottom, #BFA9926D, #BFA992AD,#BFA9926D), /*linear-gradient(to top, #BFA9926D, #AF9B859D),*/ url("interlaced.png");
+  background-size: stretch;
+  overflow-x: hidden;
 }
 
 html {
@@ -158,8 +227,22 @@ html {
   width: 100%;
 }
 
+#homepageBG {
+background-image: url("walnut-wood.webp");
+background-repeat: repeat;
+height: 490%;
+position: relative;
+}
 
-@font-face { /* OK for website? listed as personal use */
+#resourcesBG {
+  background-image: url("walnut-wood.webp");
+  background-repeat: repeat;
+  height: 200%;
+  position: relative;
+}
+
+
+@font-face {
   font-family: 'Nugelo Serif';
   src: url(nugeloserif.otf);
 }
@@ -172,6 +255,16 @@ html {
 @font-face { /* Is reg just needed, or do you need to import all font variants?? */
   font-family: 'Victor Mono';
   src:  url(VictorMono.woff);
+}
+
+@font-face {
+  font-family: 'Albertus MT';
+  src: url(AlbertusMT.otf);
+}
+
+@font-face {
+  font-family: 'Marcellus SC';
+  src: url(MarcellusSC.ttf);
 }
 
 
@@ -239,11 +332,26 @@ nav a:hover, nav a:active {
   font-size:  clamp(8px, 2vw, 16px);
 }
 
-
-body {
-  background-image: linear-gradient(to top, #BFA9926D, #BFA992AD), /*linear-gradient(to top, #BFA9926D, #AF9B859D),*/ url("interlaced.png");
-  background-size: stretch;
+#seam1 {
+  position: absolute;
+  top: 590px;
+  z-index: 2;
+  filter: brightness(104%) drop-shadow(-60px 45px 1px #b5a7a1);
 }
+
+#seam2 {
+  position: absolute;
+  top: -80px;
+  z-index: 2;
+  filter: brightness(97%) sepia(10%)drop-shadow(0px 45px 1px #b5a7a1);
+}
+
+#notepad {
+  width: 1200px;
+  top: 100px;
+  position: absolute;
+}
+
 
 .slidesImg {
   width: clamp(300px, 60%, 600px);
@@ -309,7 +417,7 @@ body {
 
 
 table {
-  font-family: Victor Mono;
+  font-family: "Albertus MT";
 
 }
 
@@ -317,14 +425,25 @@ td.trTitle {
   /*border: solid 5px #FFDD30;*/
   font-weight: bold;
   font-size: 23px;
+  width: 20em;
 }
 
 td:not(.trTitle) {
   padding-left: 60px;
 }
 
+td.trTitle p {
+  font-size: 17px;
+  font-weight: normal;
+  font-family: 'Inconsolata';
+  font-style: italic;
+  color: #b6a793;
+  text-shadow: 8px 8px 5px #090909;
+}
+
+
 .summaryText {
-  font-family: Victor Mono;
+  font-family: "Marcellus SC";
   font-size: 18px;
   margin: 10px;
 }
@@ -336,6 +455,9 @@ sup a {
   font-size: clamp(10px, 3vw, 13px);
 }
 
+sup a.footnoteOverride {
+  color: #b5d4d7;
+}
 
 .todo { /* REMOVE ONCE DONE! */
   color: #FC3321;
@@ -346,13 +468,14 @@ sup a {
   background-blend-mode: color-burn;
 }
 
-p, h2 {
-  font-family: 'Gill Sans', sans-serif;
+p {
+  font-family: 'Albertus MT', sans-serif;
 }
 
-#clsubstitution {
-
+h2 {
+  font-family:  "Alegreya SC";
 }
+
 
 div.warning {
 background-image: linear-gradient(to top left, #FFD04EB3, #FFF3787B), url(papyrus.png);/* WIP: FIND A DIAGONAL STRIPED BG */;
@@ -392,6 +515,53 @@ color:  #1F6254;
 .content {
   margin: 0 15px 0 15px;
 }
+
+
+.infoButton {
+  background:  url(info-icon-up.svg) no-repeat;
+  width: 50px;
+  height: 50px;
+  margin: none;
+  border: none;
+  filter: contrast(80%);
+  transition: filter 0.4s;
+}
+
+.infoButton:hover {
+filter: contrast(40%);
+}
+
+
+.infoTooltip {
+opacity: 0;
+position: absolute;
+z-index: 100;
+padding: 5px 0;
+background-image: linear-gradient(to bottom right,#292723D0, #181715C0);
+color: #ffebcf;
+font-family: "Albertus MT";
+margin-left: -250px;
+width: 500px;
+bottom: 100%;
+left: 50%;
+padding: 10px;
+border-radius: 10px;
+transition: opacity 0.75s;
+}
+
+.infoButton:hover + .infoTooltip {
+opacity: 1;
+}
+
+
+
+.tooltipContainer {
+  position: relative;
+}
+
+
+
+
 /* ====================================================== */
 
 @media only screen and (orientation: portrait) { /* When browser height > width */
