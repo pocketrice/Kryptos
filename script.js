@@ -56,3 +56,24 @@ function tableReplace() // Defunct
 }
 
 
+function tooltipInViewport()
+{
+	var tooltipContainer = document.getElementsByClassName("infoButton");
+	var tooltip = document.getElementsByClassName("infoTooltip");
+	tooltipContainer.addEventListener("mouseover", tooltipShift());
+
+	function tooltipShift()
+	{
+		var bounding = tooltip.getBoundingClientRect();
+		if (bounding.right > (window.innerWidth || document.documentElement.clientWidth))
+		{
+			tooltip.style.margin += 10; // WIP
+			tooltipShift();
+		}
+		else if (bounding.left < 0)
+		{
+			tooltip.style.margin-= 10;
+			tooltipShift();
+		}
+	}
+}

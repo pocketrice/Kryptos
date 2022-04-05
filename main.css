@@ -1,7 +1,6 @@
 /* Description:  the integral CSS for the entire website -- note that ALL pages use this single file so it may be a bit unorganized. */
 
-@import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Inconsolata&family=Nova+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Inconsolata&family=Alegreya+SC:wght@800&family=Nova+Mono&display=swap');
 
 #textTitle {
   color: #4A3B2C;
@@ -135,9 +134,9 @@ footer a {
   width: 300px;
 }
 
-.stripe-type-A{
+/*.stripe-type-A{
   background-image: linear-gradient(to bottom, #a1c1ae6D, #c3ddd1AD,#a1c1ae6D), url("papyrus.png");
-}
+}*/
 
 
 
@@ -540,7 +539,7 @@ padding: 5px 0;
 background-image: linear-gradient(to bottom right,#292723D0, #181715C0);
 color: #ffebcf;
 font-family: "Albertus MT";
-margin-left: -250px; /* Custom margin for diff browser/device/screen size?? */
+margin-left: -250px;
 width: 500px;
 bottom: 100%;
 left: 50%;
