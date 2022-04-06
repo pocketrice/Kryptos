@@ -2,7 +2,7 @@ var slideIndex = 1;
 var pageIndex = 1; // TODO: try to get citation page to know what page the user was previously on and then send them there??
 var tableCert = null;
 var tablePathway = null; // TODO: set each table to the table FOUND ON PAGE XX.html.
-
+var topToggle = true;
 
 
 
@@ -55,9 +55,6 @@ function tableReplace() // Defunct
 	throw new Error('Not finished!!') ;
 }
 
-
-function tooltipInViewport()
-{
 	var tooltipContainer = document.getElementsByClassName("infoButton");
 	var tooltip = document.getElementsByClassName("infoTooltip");
 	tooltipContainer.addEventListener("mouseover", tooltipShift());
@@ -65,15 +62,36 @@ function tooltipInViewport()
 	function tooltipShift()
 	{
 		var bounding = tooltip.getBoundingClientRect();
+		alert("TEST");
 		if (bounding.right > (window.innerWidth || document.documentElement.clientWidth))
 		{
-			tooltip.style.margin += 10; // WIP
+			tooltip.style.marginLeft += 10; // WIP
+			alert("RIGHT");
 			tooltipShift();
 		}
 		else if (bounding.left < 0)
 		{
-			tooltip.style.margin-= 10;
+			alert("LEFT");
+			tooltip.style.marginLeft -= 10;
 			tooltipShift();
 		}
+	}
+
+
+function topButtonToggle()
+{
+	var topButton = document.getElementsByClassName("topButton");
+
+	if (topToggle == true)
+	{
+		topButton.style.bottom = "-25%";
+		topToggle = false;
+		alert("TRUE");
+	}
+	else
+	{
+		topButton.style.bottom = "-6%";
+		topToggle = true;
+		alert("FALSE");
 	}
 }
