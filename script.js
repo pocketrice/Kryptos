@@ -1,4 +1,5 @@
 var slideIndex = 1;
+var slideIndexPreload;
 var pageIndex = 1; // TODO: try to get citation page to know what page the user was previously on and then send them there??
 var tableCert = null;
 var tablePathway = null; // TODO: set each table to the table FOUND ON PAGE XX.html.
@@ -15,16 +16,38 @@ function showSlides(n) {
 	var slides = document.getElementsByClassName("slidesImg");
 	var slidesCaption = document.getElementsByClassName("slidesCaption");
 
+
 	if (n > slides.length) {slideIndex = 1} // When n exceeds length, wrap back around
 		if (n < 1) {slideIndex = slides.length}
 	for (i = 0; i < slides.length; i++) // For loop
 	{
-		slides[i].style.display = "none";
-		slidesCaption[i].style.display = "none";
-
+		slides[i].style.opacity = "0";
+		slidesCaption[i].style.opacity = "0";
 	}
-	slides[slideIndex-1].style.display = "block";
-	slidesCaption[slideIndex-1].style.display = "block";
+
+/*
+	slideIndexPreload = n-2;
+
+	if (slideIndexPreload <= 0)
+	{
+		slideIndexPreload = slides.length - Math.abs(slideIndexPreload)
+	}
+
+	if (slideIndexPreload <= -1)
+	{
+		slideIndexPreload = slides.length - abs(slideIndexPreload);
+	}
+
+	console.warn(slideIndexPreload);
+
+
+
+	slides[slideIndexPreload].style.opacity = "1";
+	slides[slideIndexPreload].style.zIndex = "-10"; FIX */
+
+
+	slides[slideIndex-1].style.opacity = "1";
+	slidesCaption[slideIndex-1].style.opacity = "1";
 
 	//alert(slideIndex);
 }

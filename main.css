@@ -53,13 +53,16 @@
 
 
 
-.slidesImg {
-  display: none;
+
+#slideshowMain {
+  float: center;
+  position: relative;
+  width: clamp(300px, 50%, 600px);
+  height: clamp(187.5px, 70%, 375px);
+  z-index: 100;
+  left: 25%;
+  top: 50px;
 }
-
-
-
-
 
 
 
@@ -78,6 +81,7 @@ footer {
   color: #eadcce;
   font-size: 17px;
   padding: 18px 0 20px 30px;
+  /*border-top: 15px solid #262420;*/
 }
 
 .footerPositionOverride {
@@ -310,11 +314,13 @@ nav ul {
 
 .topbutton {
   position: fixed;
-  height: 200px;
+  height: 180px;
   float: bottom right;
   right: -3%;
-  bottom: -6%;
+  bottom: -5%;
   transition:  bottom 1s;
+  filter: drop-shadow(10px 15px 8px #22211d);
+  z-index: 10;
 }
 
 #consoleCursor:after {
@@ -390,13 +396,17 @@ nav a:hover, nav a:active {
 }
 
 #seam1 {
+  -webkit-user-drag: none;
+  user-select: none;
   position: absolute;
-  top: 590px;
+  top: 550px;
   z-index: 2;
   filter: brightness(104%) drop-shadow(-60px 45px 1px #b5a7a1);
 }
 
 #seam2 {
+    -webkit-user-drag: none;
+  user-select: none;
   position: absolute;
   top: -80px;
   z-index: 2;
@@ -411,9 +421,11 @@ nav a:hover, nav a:active {
 
 
 .slidesImg {
-  width: clamp(300px, 60%, 600px);
-  padding: 5% 15% 0 25%;
+  width: clamp(300px, 100%, 600px);
+  /*padding: 5% 15% 0 25%;*/
   filter:  drop-shadow(5px 5px 3px #707070);
+  position: absolute;
+  transition: opacity 1.5s linear;
 }
 
 .slidesCaption {
@@ -421,14 +433,18 @@ nav a:hover, nav a:active {
   font-family: 'Nova Mono', monospace;
   font-size: clamp(9px, 2vw, 13px);
   font-style: italic;
-  padding-bottom: 5px;
+  /*padding-bottom: 5px;*/
   color:  #C4C3C4;
 
+  overflow: hidden;
   position:  absolute;
-  left: 28%;
-  top: clamp(300px, 87%, 800px);
+  left: 7%;
+  top: clamp(300px, 83%, 580px);
   z-index: 5;
+  padding-right: 10px;
+
 }
+
 
 
 .prev, .next {
@@ -443,16 +459,16 @@ nav a:hover, nav a:active {
   transition:  background-color 0.7s;
   position:  absolute;
   z-index: 2;
-  top: 310px; /* CLAMP */
+  top: clamp(100px, 15%, 120px);
 }
 
 .prev {
-  left: 25%;
+  left: 0%;
   border-radius: 0 7px 7px 0;
 }
 
 .next { 
-  right: 25%;
+  right: 0%;
   border-radius:  7px 0 0 7px;
 }
 
@@ -463,11 +479,10 @@ nav a:hover, nav a:active {
 
 
 #captionOverlay {
-  background-color: #000000AA;
-  padding: 5% 0 0 clamp(300px, 60%, 600px);
+  background-image: linear-gradient(to right,#000000BA, #0000009A, #000000BA);
+  padding: 10% 0 0 clamp(300px, 100%, 600px);
   position:  absolute;
-  left: 25%;
-  top: clamp(100px, 87%, 800px);
+  top: clamp(100px, 84%, 580px);
   z-index: 2;
   border: 30px 0 30px 0;
 }
@@ -503,6 +518,7 @@ td.trTitle p {
   font-family: "Marcellus SC";
   font-size: 18px;
   margin: 10px;
+  text-shadow: 5px 5px 15px #000000;
 }
 
 
@@ -625,6 +641,13 @@ opacity: 1;
   position: relative;
 }
 
+
+div.hr {
+width: 100%;
+height: 4px;
+background-image: linear-gradient(to right, #57544c, #3a3833);
+overflow: hidden;
+}
 
 
 
