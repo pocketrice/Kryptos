@@ -13,4 +13,6 @@ This project also has a focus on responsiveness -- to make a website that is res
 - Online VS Editor: https://github.dev/PocketRice/Kryptos &nbsp;&nbsp;&nbsp;:trackball:
 
 
+
+
 For cross-platform testing, use **localhost/~xie.3/Kryptos/** after starting the server with **sudo apachectl start**. Remember that for other devices it is necessary to use the IP address in place of localhost.
