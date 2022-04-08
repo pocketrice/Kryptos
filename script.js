@@ -1,14 +1,44 @@
 var slideIndex = 1;
-var slideIndexPreload;
 var pageIndex = 1; // TODO: try to get citation page to know what page the user was previously on and then send them there??
-var tableCert = null;
-var tablePathway = null; // TODO: set each table to the table FOUND ON PAGE XX.html.
 var topToggle = true;
+var autoSlides = true;
+
+
+
+
+window.addEventListener("load", function() {
+	var slideshowMain = document.getElementById("slideshowMain");
+	var debugThing = document.getElementById("debugThing");
+	showSlides(slideIndex);
+	timer = setInterval(function() {plusSlides(1)}, 7000);
+
+	seamless.polyfill(); // Fixes scroll-behavior: smooth for browsers that don't support it
+
+	slideshowMain.addEventListener('mouseenter', pause);
+slideshowMain.addEventListener('mouseleave', resume); // From https://betterprogramming.pub/make-a-slideshow-with-automatic-and-manual-controls-using-html-css-and-javascript-b7e9305168f9
+})
+
+
+pause = () => {
+	clearInterval(timer);
+	debugThing.style.color = "gray";
+}
+
+resume = () => {
+	clearInterval(timer);
+	timer = setInterval(function() {plusSlides(1)}, 7000);
+	debugThing.style.color = "red";
+}
+
 
 
 
 function plusSlides(n) {
-	showSlides(slideIndex += n)
+	clearInterval(timer);
+	showSlides(slideIndex += n);
+
+	timer = setInterval(function() {plusSlides(1)}, 7000);
+
 }
 
 function showSlides(n) {
@@ -48,46 +78,19 @@ function showSlides(n) {
 
 	slides[slideIndex-1].style.opacity = "1";
 	slidesCaption[slideIndex-1].style.opacity = "1";
-
-	//alert(slideIndex);
 }
 
 
+var tooltipContainer = document.getElementsByClassName("infoButton");
+var tooltip = document.getElementsByClassName("infoTooltip");
+tooltipContainer.addEventListener("mouseover", tooltipShift());
 
-
-
-
-document.addEventListener("keydown", slidesKeyPress(e)); // Defunct
-
-function slidesKeyPress(e) {
-	if (e.keyCode != '37')
-	{
-		showSlides(slideIndex -= 1);
-	}
-
-	if (e.keyCode == '39')
-	{
-		showSlides(slideIndex += 1);
-	}
-}
-
-
-
-function tableReplace() // Defunct
+function tooltipShift()
 {
-	throw new Error('Not finished!!') ;
-}
-
-	var tooltipContainer = document.getElementsByClassName("infoButton");
-	var tooltip = document.getElementsByClassName("infoTooltip");
-	tooltipContainer.addEventListener("mouseover", tooltipShift());
-
-	function tooltipShift()
+	var bounding = tooltip.getBoundingClientRect();
+	alert("TEST");
+	if (bounding.right > (window.innerWidth || document.documentElement.clientWidth))
 	{
-		var bounding = tooltip.getBoundingClientRect();
-		alert("TEST");
-		if (bounding.right > (window.innerWidth || document.documentElement.clientWidth))
-		{
 			tooltip.style.marginLeft += 10; // WIP
 			alert("RIGHT");
 			tooltipShift();
@@ -101,20 +104,20 @@ function tableReplace() // Defunct
 	}
 
 
-function topButtonToggle()
-{
-	var topButton = document.getElementsByClassName("topButton");
+	function topButtonToggle()
+	{
+		var topButton = document.getElementsByClassName("topButton");
 
-	if (topToggle == true)
-	{
-		topButton.style.bottom = "-25%";
-		topToggle = false;
-		alert("TRUE");
+		if (topToggle == true)
+		{
+			topButton.style.bottom = "-25%";
+			topToggle = false;
+			alert("TRUE");
+		}
+		else
+		{
+			topButton.style.bottom = "-6%";
+			topToggle = true;
+			alert("FALSE");
+		}
 	}
-	else
-	{
-		topButton.style.bottom = "-6%";
-		topToggle = true;
-		alert("FALSE");
-	}
-}

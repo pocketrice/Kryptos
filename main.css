@@ -79,14 +79,15 @@ footer {
   background-image: linear-gradient(to bottom, #2f2d27,#302d28, #1f1d1a);
   font-family: 'Nova Mono', monospace;
   color: #eadcce;
-  font-size: 17px;
+  font-size: 16px;
   padding: 18px 0 20px 30px;
-  /*border-top: 15px solid #262420;*/
+  position: relative;
 }
 
 .footerPositionOverride {
   position: relative;
 }
+
 
 footer a {
   color: #c2ecdc;
@@ -94,13 +95,38 @@ footer a {
 
 
 .darkBG {
-  background-image:  url("walnut-wood-2.svg");
-  background-size: cover;
-  background-repeat: repeat-y;
-  height: 110%;
-  filter: brightness(90%);
-  box-shadow: 0 0 30px 10px #301D14 inset;
+  background-size: contain;
+  width: 1000px;
+  position: relative;
 }
+
+.darkBG img {
+  position: absolute;
+  width: 139%;
+  background-size: cover;
+  filter: brightness(90%);
+  z-index: -3;
+}
+
+.darkBGA {
+ top: 729.75px; 
+}
+
+.darkBGshade {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 1459.5px;
+z-index: 100;
+    box-shadow: inset 0 0 40px 20px #301D14;
+}
+
+
+.summaryContainer {
+      box-shadow:  inset 0 -5px 40px 3px #605837;
+      background-image: linear-gradient(to bottom right, #F9EAE09A, #F9EAE0AA, #F9EAE07A), url("sand.jpg");
+}
+
 
 #graphic1 {
   width: 600px;
@@ -228,7 +254,12 @@ body {
     background-image: linear-gradient(to bottom, #BFA9926D, #BFA992AD,#BFA9926D), /*linear-gradient(to top, #BFA9926D, #AF9B859D),*/ url("interlaced.png");
   background-size: stretch;
   overflow-x: hidden;
+  position: relative;
+
+  min-height: 100vh;
 }
+
+
 
 html {
   height: 100%;
@@ -241,14 +272,14 @@ position: relative;
 #homepageBG {
 background-image: url("walnut-wood.jpg");
 -webkit-background-image: url("walnut-wood.jpg");
-background-repeat: repeat;
+background-size: 100%;
 height: 500%;
 position: relative;
 }
 
 #resourcesBG {
   background-image: url("walnut-wood.jpg");
-  background-repeat: repeat;
+  background-size: 100%;
   height: 200%;
   position: relative;
 }
@@ -322,6 +353,8 @@ nav ul {
   filter: drop-shadow(10px 15px 8px #22211d);
   z-index: 10;
 }
+
+
 
 #consoleCursor:after {
   content: "\0000a0";
@@ -518,7 +551,9 @@ td.trTitle p {
   font-family: "Marcellus SC";
   font-size: 18px;
   margin: 10px;
-  text-shadow: 5px 5px 15px #000000;
+  color: #5A4E3B;
+  text-shadow: 2px 2px 18px #36332C;
+  text-align: center;
 }
 
 
@@ -529,7 +564,7 @@ sup a {
 }
 
 sup a.footnoteOverride {
-  color: #b5d4d7;
+  color: #436C6C;
 }
 
 .todo { /* REMOVE ONCE DONE! */
