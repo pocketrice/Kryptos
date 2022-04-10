@@ -8,7 +8,7 @@ This project also has a focus on responsiveness -- to make a website that is res
 #
 
 > For your consideration:
-- v1.0.0 is out! More polishing and additions are coming soon with the new and improved _v1.1.0 release!!_&nbsp;&nbsp;&nbsp;:minidisc:
+- v1.0.0 is out! More polishing and extra additions are coming soon. _&nbsp;&nbsp;&nbsp;:minidisc:
 - Recommended browser: Firefox&nbsp;&nbsp;&nbsp;:bookmark_tabs:
 - Online VS Editor: https://github.dev/PocketRice/Kryptos &nbsp;&nbsp;&nbsp;:trackball:
 
