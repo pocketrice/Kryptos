@@ -255,8 +255,6 @@ body {
   background-size: stretch;
   overflow-x: hidden;
   position: relative;
-
-  min-height: 100vh;
 }
 
 
@@ -266,6 +264,7 @@ html {
   width: 100%;
     scroll-behavior: smooth;
 position: relative;
+overflow-x: hidden;
 }
 
 
@@ -295,7 +294,7 @@ position: relative;
   src:  url(Monaco.woff);
 }
 
-@font-face { /* Is reg just needed, or do you need to import all font variants?? */
+@font-face {
   font-family: 'Victor Mono';
   src:  url(VictorMono.woff);
 }
@@ -346,7 +345,6 @@ nav ul {
 .topbutton {
   position: fixed;
   height: 180px;
-  float: bottom right;
   right: -3%;
   bottom: -5%;
   transition:  bottom 1s;
@@ -354,6 +352,13 @@ nav ul {
   z-index: 10;
 }
 
+
+.topbuttonToggle {
+  position: fixed;
+  height: 30px;
+  filter: drop-shadow(0 0 2px #BF2227) brightness(80%);
+  cursor: pointer;
+}
 
 
 #consoleCursor:after {

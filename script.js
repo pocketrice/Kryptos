@@ -21,13 +21,13 @@ slideshowMain.addEventListener('mouseleave', resume); // From https://betterprog
 
 pause = () => {
 	clearInterval(timer);
-	debugThing.style.color = "gray";
+	//debugThing.style.color = "gray";
 }
 
 resume = () => {
 	clearInterval(timer);
 	timer = setInterval(function() {plusSlides(1)}, 7000);
-	debugThing.style.color = "red";
+	//debugThing.style.color = "red";
 }
 
 
@@ -81,43 +81,23 @@ function showSlides(n) {
 }
 
 
-var tooltipContainer = document.getElementsByClassName("infoButton");
-var tooltip = document.getElementsByClassName("infoTooltip");
-tooltipContainer.addEventListener("mouseover", tooltipShift());
-
-function tooltipShift()
-{
-	var bounding = tooltip.getBoundingClientRect();
-	alert("TEST");
-	if (bounding.right > (window.innerWidth || document.documentElement.clientWidth))
-	{
-			tooltip.style.marginLeft += 10; // WIP
-			alert("RIGHT");
-			tooltipShift();
-		}
-		else if (bounding.left < 0)
-		{
-			alert("LEFT");
-			tooltip.style.marginLeft -= 10;
-			tooltipShift();
-		}
-	}
-
-
 	function topButtonToggle()
 	{
-		var topButton = document.getElementsByClassName("topButton");
+		var topButton = document.getElementsByClassName("topbutton");
+		var minimize = document.getElementsByClassName("topbuttonToggle");
 
 		if (topToggle == true)
 		{
-			topButton.style.bottom = "-25%";
+			minimize[0].style.display = "none";
+			topButton[0].style.bottom = "-25%";
 			topToggle = false;
-			alert("TRUE");
+			alert("TRUE"); // Hide href="" and set to onclick="" instead.
 		}
 		else
 		{
-			topButton.style.bottom = "-6%";
+			minimize[0].style.display = "block";
+			topButton[0].style.bottom = "-5%";
 			topToggle = true;
-			alert("FALSE");
+			alert("FALSE"); // Hide onclick="" and show href=""
 		}
 	}
