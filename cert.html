@@ -10,7 +10,7 @@
 		<link rel="icon" type="image/x-icon" href="kryptos-favicon.png">
 
 <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script> <!-- Smooth scrolling for browsers that don't support scroll-behavior: smooth -->
-	<script src="script.js"></script>
+	<script src="script-abbreviated.js"></script>
 
 
 	<meta charset="utf-8"> <!-- Recommended meta -->
@@ -18,7 +18,7 @@
 	<meta name="description" content="An in-depth introduction to the growing cryptographer job">
 	<meta name="keywords" content="cryptography, computer science, job">
 </head>
-<body>
+<body onscroll="topCheck()">
 	<header class="top"> <!-- HEADER -->
 		<span id="textTitle">Kryptos&nbsp;&nbsp;&nbsp;</span><br class="portraitMode"><span id="textSubtitle"></span>
 	</header>
@@ -38,7 +38,7 @@
 
 	<a onclick="topButtonToggle(1)"><img src="kryptos-top-button.svg" class="topbutton"></a>
 	<img onclick="topButtonToggle(0)" src="top-button-minimize.png" class="topbuttonToggle">
-	
+
 <div class="summaryContainer"><br>
 	<p class="summaryText">Looking for more opportunities to explore the cryptography field or bolster your resumé? Certifications are an excellent option!</p><br></div> <!-- SUMMARY -->
 	<div class="darkBG"><img src="walnut-wood.jpg"><img src="walnut-wood.jpg" class="darkBGA"></div><div class="darkBGshade"></div>
