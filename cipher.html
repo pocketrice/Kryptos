@@ -9,6 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 		<link rel="icon" type="image/x-icon" href="kryptos-favicon.png">
 
+<script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script> <!-- Smooth scrolling for browsers that don't support scroll-behavior: smooth -->
+	<script src="script.js"></script>
+
+
 	<meta charset="utf-8"> <!-- Recommended meta -->
 	<meta name="title" content="Kryptos">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Recommended meta -->
@@ -31,7 +35,8 @@
 
 		</ul>
 	</nav>
-	<a href="cipher.html#top"><img src="kryptos-top-button.svg" class="topbutton" usemap="#image-map"></a>
+	<a onclick="topButtonToggle(1)"><img src="kryptos-top-button.svg" class="topbutton"></a>
+	<img onclick="topButtonToggle(0)" src="top-button-minimize.png" class="topbuttonToggle">
 
 	<map name="image-map">
     <area target="" alt="minimize" title="minimize" onclick="topButtonToggle()" coords="551,80,642,175" shape="rect">

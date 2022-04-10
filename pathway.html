@@ -7,16 +7,10 @@
 <head>
 	<title>Kryptos | Pathway</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="icon" type="x-icon" href="kryptos-favicon.png">
 
-
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="x-icon" href="kryptos-favicon.png">
-<link rel="manifest" href="favicon/site.webmanifest">
-<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="apple-mobile-web-app-title" content="Kryptos">
-<meta name="application-name" content="Kryptos">
-<meta name="msapplication-TileColor" content="#00aba9">
-<meta name="theme-color" content="#ffffff">
+<script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script> <!-- Smooth scrolling for browsers that don't support scroll-behavior: smooth -->
+	<script src="script.js"></script>
 
 
 
@@ -42,7 +36,8 @@
 	</nav>
 
 
-	<a href="pathway.html#top"><img src="kryptos-top-button.svg" class="topbutton" usemap="#image-map"></a>
+	<a onclick="topButtonToggle(1)"><img src="kryptos-top-button.svg" class="topbutton"></a>
+	<img onclick="topButtonToggle(0)" src="top-button-minimize.png" class="topbuttonToggle">
 	<div class="summaryContainer">
 <br>
 	<p class="summaryText">It's important to have a solid foundation prior to trying to become a professional cryptographer. Look for these courses/colleges if you plan on pursuing a career in cryptography -- both classical or quantum!</p><br></div> <!-- SUMMARY -->

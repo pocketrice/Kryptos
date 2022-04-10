@@ -17,7 +17,7 @@
 	<meta name="keywords" content="cryptography, computer science, job">
 </head>
 
-<body id="homepage" onload="showSlides(slideIndex)">
+<body id="homepage" onload="showSlides(slideIndex)" onscroll="topCheck()">
 	<header class="top"> 
 		<span id="textTitle">Kryptos&nbsp;&nbsp;&nbsp;</span><br class="portraitMode"><span id="textSubtitle"></span>
 	</header>
@@ -36,8 +36,8 @@
 
 	<!--<p id="debugThing" style="color:red">ACTIVE</p>-->
 
-	<a href="Project3LX.html#top"><img src="kryptos-top-button.svg" class="topbutton"></a>
-	<img onclick="topButtonToggle()" src="top-button-minimize.png" class="topbuttonToggle">
+	<a onclick="topButtonToggle(1)"><img src="kryptos-top-button.svg" class="topbutton"></a>
+	<img onclick="topButtonToggle(0)" src="top-button-minimize.png" class="topbuttonToggle">
 
 
 	<div id="slideshowMain"> <!-- SLIDESHOW -->

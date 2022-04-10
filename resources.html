@@ -8,6 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 			<link rel="icon" type="image/x-icon" href="kryptos-favicon.png">
 
+<script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script> <!-- Smooth scrolling for browsers that don't support scroll-behavior: smooth -->
+	<script src="script.js"></script>
+
+
 	<meta charset="utf-8"> <!-- Recommended meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Recommended meta -->
 	<meta name="description" content="An in-depth introduction to the growing cryptographer job">
@@ -30,7 +34,8 @@
 		</ul>
 	</nav>
 
-		<a href="resources.html#top"><img src="kryptos-top-button.svg" class="topbutton" usemap="#image-map"></a>
+	<a onclick="topButtonToggle(1)"><img src="kryptos-top-button.svg" class="topbutton"></a>
+	<img onclick="topButtonToggle(0)" src="top-button-minimize.png" class="topbuttonToggle">
 <br>
 <div class="summaryText"> <!-- SUMMARY -->
 Use the links below to learn more about cryptography. <em>This is not a comprehensive library of resources, so remember to do outside research as well if you are interested in any of these topics!</em><br><br><br><br>
