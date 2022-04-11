@@ -721,6 +721,12 @@ p.info {
 }
 
 
+.tooltipEmphasis {
+  color: #A9EECF;
+  font-style: italic;
+  font-size: 13px;
+}
+
 
 .logoRedirect {
   max-width: 100%;
