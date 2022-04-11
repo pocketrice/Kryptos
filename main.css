@@ -1,4 +1,4 @@
-/* Description:  the integral CSS for the entire website -- note that ALL pages use this single file so it may be a bit unorganized. */
+/* Description: All the CSS for this website. Mostly kept organized, but not all rules are in order. */
 
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono&family=Inconsolata&family=Alegreya+SC:wght@800&family=Nova+Mono&display=swap');
 
@@ -15,7 +15,7 @@
   font-style: italic;
 }
 
-#textSubtitle:after { /* All this to basically animate textSubtitle between two frames of text */
+#textSubtitle:after {
   content: "A Pocket Guide for the Aspiring Cryptographer";
   animation-name: textSubtitle;
   animation-iteration-count: infinite;
@@ -71,7 +71,7 @@ header {
   background-image: url(papyrus.png);
   background-blend-mode: multiply; /* Blends two backgrounds together */
   font-family: 'Nugelo Serif';
-  padding: 10px 0 17px 0; /* top right bottom left */
+  padding: 10px 0 17px 0;
 
 }
 
@@ -81,10 +81,6 @@ footer {
   color: #eadcce;
   font-size: 16px;
   padding: 18px 0 20px 30px;
-  position: relative;
-}
-
-.footerPositionOverride {
   position: relative;
 }
 
@@ -108,23 +104,23 @@ footer a {
   z-index: -3;
 }
 
-.darkBGA {
+.darkBG2 { /* Forcibly positions the div (background) in place */
  top: 729.75px; 
 }
 
-.darkBGshade {
-margin: 0;
-padding: 0;
-width: 100%;
-height: 1459.5px;
-z-index: 100;
-    box-shadow: inset 0 0 40px 20px #301D14;
+.darkBGshade { /* Applies the shadow to a separate div to make it appear as if the two darkBG divs have a shadow */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1459.5px;
+  z-index: 100;
+  box-shadow: inset 0 0 40px 20px #301D14;
 }
 
 
 .summaryContainer {
-      box-shadow:  inset 0 -5px 40px 3px #605837;
-      background-image: linear-gradient(to bottom right, #F9EAE09A, #F9EAE0AA, #F9EAE07A), url("sand.jpg");
+  box-shadow:  inset 0 -5px 40px 3px #605837;
+  background-image: linear-gradient(to bottom right, #F9EAE09A, #F9EAE0AA, #F9EAE07A), url("sand.jpg");
 }
 
 
@@ -167,11 +163,11 @@ z-index: 100;
   width: 300px;
 }
 
-.stripe {
-background-image: linear-gradient(to bottom,#2f2a277A, #2f2a273A, #2f2a277A);
-background-size: cover;
-border-top: 10px solid #2f2a273A;
-border-bottom: 10px solid #2f2a273A;
+.stripe { /* Replacement for <hr> since styling it doesn't really work in Safari */
+  background-image: linear-gradient(to bottom,#2f2a277A, #2f2a273A, #2f2a277A);
+  background-size: cover;
+  border-top: 10px solid #2f2a273A;
+  border-bottom: 10px solid #2f2a273A;
 }
 
 
@@ -206,16 +202,16 @@ border-bottom: 10px solid #2f2a273A;
   position: absolute;
   width: 600px;
   left: 100px;
-    top: 2210px;
-    transform: rotateZ(5deg);
+  top: 2210px;
+  transform: rotateZ(5deg);
 }
 
 #paper3 {
   position: absolute;
   width: 600px;
   left: 50px;
-    top: 2520px;
-    transform: rotateZ(-5deg);
+  top: 2520px;
+  transform: rotateZ(-5deg);
 }
 
 
@@ -251,7 +247,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-    background-image: linear-gradient(to bottom, #BFA9926D, #BFA992AD,#BFA9926D), /*linear-gradient(to top, #BFA9926D, #AF9B859D),*/ url("interlaced.png");
+  background-image: linear-gradient(to bottom, #BFA9926D, #BFA992AD,#BFA9926D), url("interlaced.png");
   background-size: stretch;
   overflow-x: hidden;
   position: relative;
@@ -262,17 +258,17 @@ body {
 html {
   height: 100%;
   width: 100%;
-    scroll-behavior: smooth;
-position: relative;
+  scroll-behavior: smooth; /* Broken on safari so a "polyfill script" is used */
+  position: relative;
 }
 
 
 #homepageBG {
-background-image: url("walnut-wood.jpg");
--webkit-background-image: url("walnut-wood.jpg");
-background-size: 100%;
-height: 500%;
-position: relative;
+  background-image: url("walnut-wood.jpg");
+  -webkit-background-image: url("walnut-wood.jpg");
+  background-size: 100%;
+  height: 500%;
+  position: relative;
 }
 
 #resourcesBG {
@@ -324,8 +320,8 @@ nav ul {
   filter: drop-shadow(3px 0px 3px #635f4d);
 }
 
-.miniheader { /* REMOVE LATER */
-    background-image: linear-gradient(to bottom,#22201dED, #302d28DD, #22201dFD), url(fabric.jpg);
+.miniheader { /* Scrapped idea for a smaller header when you scroll down*/
+  background-image: linear-gradient(to bottom,#22201dED, #302d28DD, #22201dFD), url(fabric.jpg);
   box-shadow: 0 20px 10px 3px #3c383293;
   padding: 20px 0 5px 0;
   font-family: "Nugelo Serif";
@@ -349,7 +345,6 @@ nav ul {
   transition:  bottom 1s;
   z-index: 99;
   cursor: pointer;
-  /*clip-path: inset(3% 25% 0 23%);*/
   filter: drop-shadow(10px 15px 8px #22211d);
 }
 
@@ -371,7 +366,7 @@ nav ul {
 #consoleCursor:after {
   content: "\0000a0";
   background-color: #796a5d;
-animation-name: cursorFlash;
+  animation-name: cursorFlash;
   animation-iteration-count: infinite;
   animation-duration: 1.2s;
   animation-timing-function: linear;
@@ -414,7 +409,7 @@ nav a:hover, nav a:active {
   background-color: #746f5a;
 }
 
-.active { /* Reserved for navbar */
+.active { /* Used in nav to "select" the current page */
   background-image: url(papyrus.png);
   background-color: #524f43;
   color: rgb(194, 190, 165);
@@ -434,28 +429,81 @@ nav a:hover, nav a:active {
 }
 
 
-#wrapper {
-  position: absolute;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-#seam1 {
+#seam1A {
   -webkit-user-drag: none;
   user-select: none;
   position: absolute;
   top: 550px;
-  z-index: 2;
-  filter: brightness(104%) drop-shadow(-60px 45px 1px #b5a7a1);
+  z-index: 10;
+  filter: brightness(104%);
 }
 
-#seam2 {
-    -webkit-user-drag: none;
+#seam1B {
+  -webkit-user-drag: none;
   user-select: none;
   position: absolute;
-  top: -80px;
-  z-index: 2;
-  filter: brightness(97%) sepia(10%) drop-shadow(0px 45px 1px #b5a7a1);
+  top: 595px;
+  left: -60px;
+  z-index: 9;
+  filter: brightness(83%) blur(1px) sepia(8%) hue-rotate(-15deg);
+}
+
+#seam2A {
+  -webkit-user-drag: none;
+  user-select: none;
+  position: absolute;
+  top: -40px;
+  z-index: 10;
+  filter: brightness(98%);
+}
+
+#seam2B {
+  -webkit-user-drag: none;
+  user-select: none;
+  position: absolute;
+  top: 5px;
+  left: -60px;
+  z-index: 9;
+  filter: brightness(83%) blur(1px) sepia(8%) hue-rotate(-15deg);
+}
+
+.cipher {
+  width: 60%;
+  position: relative;
+  padding-left: 23%;
+  padding-right: 25%;
+  filter: drop-shadow(2px 2px 10px #4f3d32);
+}
+
+p#mono {
+  font-family: 'Inconsolata', monospace;
+}
+
+#tabularecta {
+  width: 35%;
+  padding-left: 31%;
+    filter: drop-shadow(2px 2px 10px #110e0d);
+}
+
+#enigmamachine {
+  width: 55%;
+  padding-left: 21%;
+      filter: drop-shadow(2px 2px 10px #110e0d);
+}
+
+#nsa-otp {
+  width: 45%;
+  height: 400px;
+  padding-left: 25%;
+        filter: drop-shadow(2px 2px 10px #110e0d);
+}
+
+
+.caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 12px;
+  color: #3c3d3d;
 }
 
 #notepad {
@@ -467,7 +515,6 @@ nav a:hover, nav a:active {
 
 .slidesImg {
   width: clamp(300px, 100%, 600px);
-  /*padding: 5% 15% 0 25%;*/
   filter:  drop-shadow(5px 5px 3px #707070);
   position: absolute;
   transition: opacity 1.5s linear;
@@ -478,9 +525,7 @@ nav a:hover, nav a:active {
   font-family: 'Nova Mono', monospace;
   font-size: clamp(9px, 2vw, 13px);
   font-style: italic;
-  /*padding-bottom: 5px;*/
   color:  #C4C3C4;
-
   overflow: hidden;
   position:  absolute;
   left: 7%;
@@ -494,12 +539,12 @@ nav a:hover, nav a:active {
 
 .prev, .next {
   cursor: pointer;
-  font-size:  clamp(20px, 5vw, 40px); /* CLAMP */
+  font-size:  clamp(20px, 5vw, 40px);
   font-family: 'B612 Mono', monospace;
   user-select:  none;
   -webkit-user-select:  none; /* Safari + Chrome */
   color:  #F2E7E0;
-  padding:  25px 8px 25px 8px; /* CLAMP */
+  padding:  25px 8px 25px 8px;
   background-color:  #0000009A;
   transition:  background-color 0.7s;
   position:  absolute;
@@ -539,7 +584,6 @@ table {
 }
 
 td.trTitle {
-  /*border: solid 5px #FFDD30;*/
   font-weight: bold;
   font-size: 23px;
   width: 20em;
@@ -579,7 +623,7 @@ sup a.footnoteOverride {
   color: #436C6C;
 }
 
-.todo { /* REMOVE ONCE DONE! */
+.todo { /* Placeholder text */
   color: #FC3321;
   font-weight: bold;
   font-size: 16px;
@@ -598,37 +642,37 @@ h2 {
 
 
 div.warning {
-background-image: linear-gradient(to top left, #FFD04EB3, #FFF3787B), url(papyrus.png);
-border: 5px;
-padding: 10px;
-border-radius: 20px;
-border-style: solid;
-border-color: #534F29;
-margin: 0 80px 0 50px;
+  background-image: linear-gradient(to top left, #FFD04EB3, #FFF3787B), url(papyrus.png);
+  border: 5px;
+  padding: 10px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #534F29;
+  margin: 0 80px 0 50px;
 }
 
 p.warning {
-font-weight: bold;
-font-style: italic;
-font-size: 20px;
-color:  #84771E;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  color:  #84771E;
 }
 
 div.info {
-background-image: linear-gradient(to top left,#298678B3, #2681737B), url(papyrus.png);
-border: 5px;
-padding: 10px;
-border-radius: 20px;
-border-style: solid;
-border-color: #31544C;
-margin: 0 80px 0 50px;
+  background-image: linear-gradient(to top left,#298678B3, #2681737B), url(papyrus.png);
+  border: 5px;
+  padding: 10px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #31544C;
+  margin: 0 80px 0 50px;
 }
 
 p.info {
-font-weight: bold;
-font-style: italic;
-font-size: 20px;
-color:  #1F6254;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  color:  #1F6254;
 }
 
 
@@ -649,31 +693,31 @@ color:  #1F6254;
 }
 
 .infoButton:hover {
-filter: contrast(40%);
+  filter: contrast(40%);
 }
 
 
 .infoTooltip {
-opacity: 0;
-position: absolute;
-z-index: 100;
-padding: 5px 0;
-background-image: linear-gradient(to bottom right,#292723D0, #181715C0);
-color: #ffebcf;
-font-family: "Albertus MT";
-margin-left: -250px;
-width: 500px;
-bottom: 100%;
-left: 50%;
-padding: 10px;
-border-radius: 10px;
-transition: opacity 0.75s;
-user-select: none; /* Text is unselectable... */
-pointer-events: none; /* ...and the image link behind the text is still clickable. */
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  padding: 5px 0;
+  background-image: linear-gradient(to bottom right,#292723D0, #181715C0);
+  color: #ffebcf;
+  font-family: "Albertus MT";
+  margin-left: -250px;
+  width: 500px;
+  bottom: 100%;
+  left: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  transition: opacity 0.75s;
+  user-select: none; /* Text is unselectable... */
+  pointer-events: none; /* ...and the image link behind the text is still clickable. */
 }
 
 .infoButton:hover + .infoTooltip {
-opacity: 1;
+  opacity: 1;
 }
 
 
@@ -690,10 +734,10 @@ opacity: 1;
 
 
 div.hr {
-width: 100%;
-height: 4px;
-background-image: linear-gradient(to right, #57544c, #3a3833);
-overflow: hidden;
+  width: 100%;
+  height: 4px;
+  background-image: linear-gradient(to right, #57544c, #3a3833);
+  overflow: hidden;
 }
 
 
@@ -701,24 +745,24 @@ overflow: hidden;
 /* ====================================================== */
 
 @media only screen and (orientation: portrait) { /* When browser height > width */
-	.portraitMode { /* Note:  may need to split this class for more complex changes (?)*/
+	.portraitMode {
 		display: inline;
 		visibility: visible;
   }
 
   #textSubtitle {
-   padding: 30px 0 0 15px; /* top right bottom left */
+   padding: 30px 0 0 15px;
  }
 }
 
 
-@media only screen and (max-width: 978px)
+@media only screen and (max-width: 978px) /* All media rules below basically just change tooltip position so it's visible on all screen sizes */
 {
   .infoTooltip
   {
-  margin-left: -300px;
-  left: 0%;
-  right: 300px;
+    margin-left: -300px;
+    left: 0%;
+    right: 300px;
   }
 
   .logoRedirect 
@@ -729,19 +773,19 @@ overflow: hidden;
 
 @media only screen and (min-width: 1101px) and (max-width: 1300px)
 {
-   .infoTooltip
-  {
+ .infoTooltip
+ {
   margin-left: -400px;
   left: 0%;
   right: 300px;
-  }
+}
 }
 @media only screen and (min-width: 979px) and (max-width: 1100px) {
   .infoTooltip
   {
-  margin-left: -500px;
-  left: 0%;
-  right: 300px;
+    margin-left: -500px;
+    left: 0%;
+    right: 300px;
   }
 }
 
