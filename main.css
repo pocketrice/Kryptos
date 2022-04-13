@@ -167,7 +167,8 @@ footer a {
   width: 1200px;
   position: absolute;
   transform: rotateZ(7deg);
-  right: 500px;
+  /*right: 500px;*/
+  left: -350px;
   top: 100px;
 }
 
@@ -184,7 +185,7 @@ footer a {
   position: absolute;
   top: 1800px;
   transform: rotateZ(10deg);
-  right: 400px;
+  left: -250px;
 }
 
 #font1, #font2, #font3, #font4, #font5, #font6, #font7, #font8, #font9, #font10 {
@@ -274,28 +275,56 @@ footer a {
 
 #photo1, #photo2, #photo3 {
   position: absolute;
-  width: 300px;
+  width: 290px;
   height: 190px;
   box-shadow: 5px 5px 10px  #201E1A;
 }
 
 #photo1 {
-  top: 2000px;
+  top: 1980px;
   left: 180px;
     transform: rotateZ(-1deg);
 }
 
 #photo2 {
   top: 2200px;
-  left: 550px;
+  left: 540px;
   transform: rotateZ(25deg);
 }
 
 #photo3 {
-  top: 2350px;
+  top: 2380px;
   left: 200px;
-  transform: rotateZ(15deg);
+  transform: rotateZ(18deg);
 }
+
+
+#tape1, #tape2, #tape3 {
+  position: absolute;
+  top: 2500px;
+  width: 120px;
+  opacity: 90%;
+}
+
+#tape1 {
+  top: 2115px;
+  left: 300px;
+  transform: rotateZ(140deg);
+}
+
+#tape2 {
+  top: 2110px;
+  left: 540px;
+  transform: rotateZ(-50deg);
+}
+
+#tape3 {
+  top: 2370px;
+  left: 420px;
+}
+
+
+
 .stripe { /* Replacement for <hr> since styling it doesn't really work in Safari */
   background-image: linear-gradient(to bottom,#2f2a277A, #2f2a273A, #2f2a277A);
   background-size: cover;
