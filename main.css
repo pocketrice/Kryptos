@@ -881,7 +881,27 @@ p.info {
   pointer-events: none; /* ...and the image link behind the text is still clickable. */
 }
 
+.infoTooltipAbsolute {
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  padding: 5px 0;
+  background-image: linear-gradient(to bottom right,#292723D0, #181715C0);
+  color: #ffebcf;
+  font-family: "Albertus MT";
+  top: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: opacity 0.75s;
+  user-select: none; /* Text is unselectable... */
+  pointer-events: none; /* ...and the image link behind the text is still clickable. */
+}
+
 .infoButton:hover + .infoTooltip {
+  opacity: 1;
+}
+
+#font1:hover + .infoTooltipAbsolute {
   opacity: 1;
 }
 
