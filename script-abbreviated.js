@@ -1,11 +1,17 @@
 var topToggle = true;
 var naturalTop = true;
-
+var fontItem = document.getElementsByClassName("font");
+var tooltipItem = document.getElementsByClassName("infoTooltipAbsolute"); // RENAME
+var fontPosTop = [210, 240, 275, 360, 390, 410, 430, 460, 500, 530];
+var fontPosLeft = [150, 185, 170, 400, 500, 390, 530, 200, 230, 210];
+var fontPosRot = [-5, 5]; // Note: three different rotations are used in total (and one is 0).
+var fontType = ['Albertus MT', 'Alegreya SC', 'B612 Mono', 'Inconsolata', 'Marcellus SC', 'Monaco', 'Nova Mono', 'Nugelo Serif', 'Top Secret Stamp', 'Victor Mono']
 
 
 
 window.addEventListener("load", function() {
-	seamless.polyfill(); // Fixes scroll-behavior: smooth for browsers that don't support it
+	//seamless.polyfill(); // Fixes scroll-behavior: smooth for browsers that don't support it
+  forcePosition();
 })
 
 
@@ -68,3 +74,42 @@ function topCheck() { // Scroll detection via JS is broken by overflow-x: hidden
 			topToggle = false;
 		}
 	}
+
+
+function forcePosition()
+{
+	for (let i = 0; i < 10; i++)
+	{
+			fontItem[i].style.top = fontPosTop[i] + "px";
+		fontItem[i].style.left = fontPosLeft[i] + "px";
+		fontItem[i].style.fontFamily = fontType[i];
+
+		if (i <= 2) // font1 - font3
+		{
+			fontItem[i].style.transform = "rotateZ(" + fontPosRot[0] + "deg)";
+		}
+
+		// font4 - font6 (which would be 3 <= x <= 5) has no rotation at all
+
+		else if ((i <= 9) && (i >= 7)) // font8 - font10
+		{
+			fontItem[i].style.transform = "rotateZ(" + fontPosRot[1] + "deg)";
+		}
+
+		fontItem[i].addEventListener('mouseover', function() {
+			tooltipItem[i].style.opacity = 1;
+			tooltipItem[i].style.transition = "opacity 0.75s, transform 0.2s";
+		})
+
+		fontItem[i].addEventListener('mouseout', function() {
+			tooltipItem[i].style.opacity = 0;
+			tooltipItem[i].style.transition = "opacity 0.75s, transform 0.75s";
+		})
+
+				document.addEventListener('mousemove', function(e) {
+			tooltipItem[i].style.transform = 'translateY('+(e.clientY-210)+'px)';
+			tooltipItem[i].style.transform += 'translateX('+(e.clientX-100)+'px)';
+		})
+
+	}
+}

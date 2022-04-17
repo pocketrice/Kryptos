@@ -188,89 +188,17 @@ footer a {
   left: -250px;
 }
 
-#font1, #font2, #font3, #font4, #font5, #font6, #font7, #font8, #font9, #font10 {
+.font {
   position: absolute;
-  z-index: 5;
-  top: 1000px;
+  z-index: 10;
   color: #181715;
   font-size: 20px;
 }
 
-#font1
-{
-  font-family: 'Albertus MT';
-  top: 200px;
-  left: 150px;
-    transform: rotateZ(-5deg);
+.infoTooltipAbsolute > em {
+  color: #FDBEA8;
 }
 
-#font2
-{
-  font-family: 'Alegreya SC';
-  top: 230px;
-  left: 185px;
-    transform: rotateZ(-5deg);
-}
-
-#font3
-{
-  font-family: 'B612 Mono';
-  top: 265px;
-  left: 170px;
-    transform: rotateZ(-5deg);
-}
-
-#font4
-{
-  font-family: 'Inconsolata';
-  top: 350px;
-  left: 400px;
-}
-
-#font5
-{
-  font-family: 'Marcellus SC';
-  top: 380px;
-  left: 500px;
-}
-
-#font6
-{
-  font-family: 'Monaco';
-  top: 400px;
-  left: 390px;
-}
-
-#font7
-{
-  font-family: 'Nova Mono';
-  top: 420px;
-  left: 530px;
-}
-
-#font8
-{
-  font-family: 'Nugelo Serif';
-  top: 450px;
-  left: 200px;
-  transform: rotateZ(5deg);
-}
-
-#font9
-{
-  font-family: 'Top Secret Stamp';
-  top: 490px;
-  left: 230px;
-    transform: rotateZ(5deg);
-}
-
-#font10
-{
-  font-family: 'Victor Mono';
-  top: 520px;
-  left: 210px;
-    transform: rotateZ(5deg);
-}
 
 
 #photo1, #photo2, #photo3 {
@@ -883,27 +811,27 @@ p.info {
 
 .infoTooltipAbsolute {
   opacity: 0;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   padding: 5px 0;
-  background-image: linear-gradient(to bottom right,#292723D0, #181715C0);
-  color: #ffebcf;
+  background-image: linear-gradient(to bottom right,#292723D5, #181715C2);
+  color: #FFEFDD;
   font-family: "Albertus MT";
   top: 200px;
   padding: 10px;
-  border-radius: 10px;
-  transition: opacity 0.75s;
+  border-radius: 6px;
+  transition: opacity 0.75s, transform 0.1s;
+  transition-timing-function: smooth;
   user-select: none; /* Text is unselectable... */
   pointer-events: none; /* ...and the image link behind the text is still clickable. */
+  width: 200px;
+  font-size: 12px;
 }
 
 .infoButton:hover + .infoTooltip {
   opacity: 1;
 }
 
-#font1:hover + .infoTooltipAbsolute {
-  opacity: 1;
-}
 
 
 
