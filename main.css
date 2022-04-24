@@ -529,7 +529,9 @@ nav a:hover, nav a:active {
   top: 550px;
   z-index: 10;
   filter: brightness(104%);
+  overflow-x: hidden;
 }
+
 
 #seam1B {
   -webkit-user-drag: none;
@@ -610,7 +612,7 @@ p#mono {
   width: clamp(300px, 100%, 600px);
   filter:  drop-shadow(5px 5px 3px #707070);
   position: absolute;
-  transition: opacity 1.5s linear;
+  transition: opacity 1.5s ease-in-out; 
 }
 
 .slidesCaption {

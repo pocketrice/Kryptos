@@ -98,7 +98,7 @@ function forcePosition()
 
 		fontItem[i].addEventListener('mouseover', function() {
 			tooltipItem[i].style.opacity = 1;
-			tooltipItem[i].style.transition = "opacity 0.75s, transform 0.2s";
+			tooltipItem[i].style.transition = "opacity 0.75s, transform 0.15s";
 		})
 
 		fontItem[i].addEventListener('mouseout', function() {
@@ -110,6 +110,14 @@ function forcePosition()
 			tooltipItem[i].style.transform = 'translateY('+(e.clientY-210)+'px)';
 			tooltipItem[i].style.transform += 'translateX('+(e.clientX-100)+'px)';
 		})
+
+			document.addEventListener('scroll', function() {``
+				if (tooltipItem[i].style.opacity == 1)
+				{
+					tooltipItem[i].style.transition = "opacity 0s, transform 0.75s";
+					tooltipItem[i].style.opacity == 0;
+				}
+			})
 
 	}
 }

@@ -11,8 +11,7 @@ var naturalTop = true;
 
 
 
-window.addEventListener("load", function() {
-	var slideshowMain = document.getElementById("slideshowMain");
+window.addEventListener("load", function() {	
 	//var debugThing = document.getElementById("debugThing");
 	showSlides(slideIndex);
 	timer = setInterval(function() {plusSlides(1)}, 7000);
@@ -65,47 +64,43 @@ function plusSlides(n) {
 	clearInterval(timer);
 	showSlides(slideIndex += n);
 
-	timer = setInterval(function() {plusSlides(1)}, 7000);
-
 }
 
 function showSlides(n) {
 	var i;
 	var slides = document.getElementsByClassName("slidesImg");
 	var slidesCaption = document.getElementsByClassName("slidesCaption");
-
+	var slideshowMain = document.getElementById("slideshowMain");
 
 	if (n > slides.length) {slideIndex = 1} // When n exceeds length, wrap back around
-		if (n < 1) {slideIndex = slides.length}
+	if (n < 1) {slideIndex = slides.length}
 			for (i = 0; i < slides.length; i++)
 			{
 				slides[i].style.opacity = "0";
 				slidesCaption[i].style.opacity = "0";
+
 			}
 
-/* // Preload the previous image so when the gallery transitions the background isn't showing through 
-	slideIndexPreload = n-2;
+	var slideIndexPreload = slideIndex-2;
 
-	if (slideIndexPreload <= 0)
+	if (slideIndexPreload == -1)
 	{
-		slideIndexPreload = slides.length - Math.abs(slideIndexPreload)
+		slideIndexPreload = 3;
 	}
 
-	if (slideIndexPreload <= -1)
+	if (slideIndexPreload == 3)
 	{
-		slideIndexPreload = slides.length - abs(slideIndexPreload);
-	}
+		slideIndexPreload = 0;
+	} // NOTE: imagePreload b/w last image and first image doesn't work (still shows the vanilla BG)
+	
+	console.log(slideIndexPreload);
 
-	console.warn(slideIndexPreload);
-
-
-
-	slides[slideIndexPreload].style.opacity = "1";
-	slides[slideIndexPreload].style.zIndex = "-10"; */
-
-
+	slides[slideIndexPreload].style.opacity = "1"
+	slides[slideIndexPreload].style.zIndex = "-100";
 	slides[slideIndex-1].style.opacity = "1";
 	slidesCaption[slideIndex-1].style.opacity = "1";
+
+
 }
 
 

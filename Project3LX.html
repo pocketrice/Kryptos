@@ -7,9 +7,12 @@
 	<title>Kryptos</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="icon" type="image/x-icon" href="kryptos-favicon.png">
+	<link rel="preload" href="kryptos-terminal.svg" as="image">
+	<link rel="preload" href="kryptos-paper-3.svg" as="image">
 
-	<script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script> <!-- Smooth scrolling for browsers that don't support scroll-behavior: smooth -->
-	<script src="script.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js" defer></script> <!-- Smooth scrolling for browsers that don't support scroll-behavior: smooth -->
+	<script src="script.js" defer></script>
 
 	<meta charset="utf-8"> <!-- Recommended meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Recommended meta -->
@@ -69,8 +72,9 @@
 	</div>
 
 	<br><br><br>
-
+	<div class="seam-mask">
 	<img src="kryptos-seam1.png" id="seam1A" loading="lazy" draggable="false" ondragstart="return false">
+		</div>
 		<img src="kryptos-seam1.png" id="seam1B" loading="lazy" draggable="false" ondragstart="return false">
 
 	<div id="homepageBG"> <!-- PROMO SECTION -->
