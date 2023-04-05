@@ -10,10 +10,3 @@ This project also has a focus on responsiveness -- to make a website that is res
 > For your consideration:
 - v1.0.1 is out! More polishing and extra additions are coming soon. &nbsp;&nbsp;&nbsp;:minidisc:
 - Recommended browser: Firefox&nbsp;&nbsp;&nbsp;:bookmark_tabs:
-- Online VS Editor: https://github.dev/PocketRice/Kryptos &nbsp;&nbsp;&nbsp;:trackball:
-
-<br><br>
-#
-> For cross-platform testing, use **localhost/~xie.3/Kryptos/** after starting the server with **sudo apachectl start**. Remember that for other devices it is necessary to use the IP address in place of localhost.
-
-_Ready to test your changes? Use the apache server on the main laptop to make testing responsiveness easier._
