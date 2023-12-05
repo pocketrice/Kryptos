@@ -15,7 +15,7 @@
 
 <p align="center">
   <br>
-A pocket guide for the avid or aspiring cryptographer to learn about the next steps to becoming a professional encrypter/decrypter in the fleeting workforce! Try your hand at some quick demo puzzles, learn the ins-and-outs of the job, or read up on the history of ciphertexts. <em>Designed for a Web Programming course, with a focus on skeuomorphism and responsiveness.</em>
+A pocket guide for the avid or aspiring cryptographer to learn about the next steps to becoming a professional encrypter/decrypter in the fleeting workforce! Try your hand at some quick demo puzzles, learn the ins-and-outs of the job, or read up on the history of ciphertexts. <em>Designed as a career info page for a Web Programming course, with a focus on skeuomorphism and responsiveness.</em>
   
   <br><br>
 
