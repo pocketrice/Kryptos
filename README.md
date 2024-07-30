@@ -20,5 +20,5 @@ A pocket guide for the avid or aspiring cryptographer to learn about the next st
   <br><br>
 
 
-<img width="1218" alt="Screenshot 2023-10-24 at 9 25 26 PM" src="https://github.com/PocketRice/Kryptos/assets/79682953/a73eb815-5d89-4453-8574-41b5b01924f2">
+<img width="960" alt="Screen Shot 2024-07-30 at 12 01 14 AM" src="https://github.com/user-attachments/assets/2419aa7b-872b-42a9-b6de-5087ca3d932e">
 
